@@ -925,7 +925,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!136 &1035502780
 CapsuleCollider:
@@ -1138,7 +1138,7 @@ MonoBehaviour:
   capCellCapacity: 1
   startingPopulations:
   - prefab: {fileID: 3617397216089966378, guid: 83398c3f7ef3f8b4cbeb446d43239261, type: 3}
-    population: 50
+    population: 100
   drawBoundary: 1
   drawOccupiedCells: 0
 --- !u!4 &1279573102
