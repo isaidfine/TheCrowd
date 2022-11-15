@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3422488169052819328
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3040563576298773591, guid: 8b0ed02b292cc284f9ef02496cfb85ab, type: 3}
+      propertyPath: m_Name
+      value: Leader
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617397216089966378, guid: 8b0ed02b292cc284f9ef02496cfb85ab, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617397216089966378, guid: 8b0ed02b292cc284f9ef02496cfb85ab, type: 3}
+      propertyPath: activeSettings
+      value: 
+      objectReference: {fileID: 11400000, guid: 62123de66b3d62e4aa312510ee3cff7a, type: 2}
+    - target: {fileID: 4214186027875092558, guid: 8b0ed02b292cc284f9ef02496cfb85ab, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214186027875092558, guid: 8b0ed02b292cc284f9ef02496cfb85ab, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214186027875092558, guid: 8b0ed02b292cc284f9ef02496cfb85ab, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214186027875092558, guid: 8b0ed02b292cc284f9ef02496cfb85ab, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214186027875092558, guid: 8b0ed02b292cc284f9ef02496cfb85ab, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214186027875092558, guid: 8b0ed02b292cc284f9ef02496cfb85ab, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214186027875092558, guid: 8b0ed02b292cc284f9ef02496cfb85ab, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214186027875092558, guid: 8b0ed02b292cc284f9ef02496cfb85ab, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214186027875092558, guid: 8b0ed02b292cc284f9ef02496cfb85ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214186027875092558, guid: 8b0ed02b292cc284f9ef02496cfb85ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214186027875092558, guid: 8b0ed02b292cc284f9ef02496cfb85ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8b0ed02b292cc284f9ef02496cfb85ab, type: 3}
+--- !u!1 &382065643842261975 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3040563576298773591, guid: 8b0ed02b292cc284f9ef02496cfb85ab, type: 3}
+  m_PrefabInstance: {fileID: 3422488169052819328}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &81619967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382065643842261975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1528e409f49fc5748b6fcaf87d60b2ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartFollow: 1
+  PathToFollow: {fileID: 0}
+  CurrentWayPointID: 0
+  Speed: 25
+  reachDistance: 0
+  PathName: path
+--- !u!114 &81619968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382065643842261975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3fb7ccea15004041ac0a0c5de13d49d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _flockBox: {fileID: 0}
+  shape:
+    type: 0
+    radius: 1
+  debugDrawShape: 0
+  tagSearchableOutsideBounds: 1

@@ -37,4 +37,28 @@ MonoBehaviour:
   maxForce: 20
   maxSpeed: 20
   containmentBehavior: {fileID: -7725174596085115582}
-  behaviors: []
+  behaviors:
+  - {fileID: 7161214822966459844}
+--- !u!114 &7161214822966459844
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fceebd7e1c2fb746a50879f9f88dfb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 1
+  weight: 1
+  useTagFilter: 0
+  filterTags: []
+  drawDebug: 0
+  debugColor: {r: 1, g: 1, b: 1, a: 1}
+  debugDrawSteering: 0
+  debugDrawProperties: 0
+  foldout: 1
+  wanderScope: 90
+  wanderIntensity: 1
