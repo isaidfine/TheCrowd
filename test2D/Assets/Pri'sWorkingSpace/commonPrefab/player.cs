@@ -21,8 +21,5 @@ public class player : MonoBehaviour
         position.y = position.y + MoveSpeed * v* Time.deltaTime;
         transform.position = position;
     }
-    void OnTiggerEnter()
-    {
-        
-    }
+
 }
