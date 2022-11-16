@@ -243,7 +243,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 50
   m_Depth: -1
   m_CullingMask:
@@ -268,7 +268,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014376891}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 50, y: 50, z: 0}
+  m_LocalPosition: {x: 50, y: 50, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -442,7 +442,9 @@ MonoBehaviour:
   capCellCapacity: 1
   startingPopulations:
   - prefab: {fileID: 3617397216089966378, guid: a3ff1887616b8534db17b24a57117ba3, type: 3}
-    population: 30
+    population: 25
+  - prefab: {fileID: 3617397216089966378, guid: b5c26a732cf745145b355f76e1271d58, type: 3}
+    population: 25
   drawBoundary: 1
   drawOccupiedCells: 0
 --- !u!4 &1385211393
@@ -554,6 +556,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1385211393}
     m_Modifications:
     - target: {fileID: 81619967, guid: 1d967fd31bd691447abb865d5c67ad61, type: 3}
+      propertyPath: Speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 81619967, guid: 1d967fd31bd691447abb865d5c67ad61, type: 3}
       propertyPath: PathToFollow
       value: 
       objectReference: {fileID: 1519068685}
@@ -609,9 +615,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2111217637267163306, guid: 1d967fd31bd691447abb865d5c67ad61, type: 3}
-      propertyPath: debugDrawShape
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 1d967fd31bd691447abb865d5c67ad61, type: 3}

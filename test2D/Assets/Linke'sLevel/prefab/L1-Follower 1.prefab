@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4214186027875092558}
   - component: {fileID: 3617397216089966378}
   m_Layer: 0
-  m_Name: Follower 3
+  m_Name: L1-Follower 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,7 +51,7 @@ MonoBehaviour:
     radius: 10
   debugDrawShape: 1
   tagSearchableOutsideBounds: 0
-  activeSettings: {fileID: 11400000, guid: bf4d7c0beedbbae499849189b0c9e7a8, type: 2}
+  activeSettings: {fileID: 11400000, guid: bfd00496117769b4d97f89e5d80b02d4, type: 2}
 --- !u!1 &7765479890752917496
 GameObject:
   m_ObjectHideFlags: 0
