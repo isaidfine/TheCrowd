@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4214186027875092558}
   - component: {fileID: 3617397216089966378}
+  - component: {fileID: 7528054187295542495}
   m_Layer: 0
   m_Name: L1-Follower 1
   m_TagString: Untagged
@@ -52,6 +53,19 @@ MonoBehaviour:
   debugDrawShape: 1
   tagSearchableOutsideBounds: 0
   activeSettings: {fileID: 11400000, guid: bfd00496117769b4d97f89e5d80b02d4, type: 2}
+--- !u!65 &7528054187295542495
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3040563576298773591}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7765479890752917496
 GameObject:
   m_ObjectHideFlags: 0
