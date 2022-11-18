@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4214186027875092558}
   - component: {fileID: 3617397216089966378}
   - component: {fileID: -2382757947042838300}
+  - component: {fileID: 1554764140883788318}
   m_Layer: 3
   m_Name: L1-Follower
   m_TagString: Untagged
@@ -67,6 +68,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.567115, y: 7.7706175, z: 6.1757894}
   m_Center: {x: -0.20442152, y: 0.93689406, z: 0.055061102}
+--- !u!114 &1554764140883788318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3040563576298773591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d131db4b600d2e14aa797dc3409669a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3116914503870187888
 GameObject:
   m_ObjectHideFlags: 0
