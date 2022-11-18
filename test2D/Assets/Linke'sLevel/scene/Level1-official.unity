@@ -643,15 +643,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 911352406299065908, guid: 3aa1e957295188f4aa58626934f84427, type: 3}
       propertyPath: speed
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 967741102151635046, guid: 3aa1e957295188f4aa58626934f84427, type: 3}
+      propertyPath: fadingSpeed
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 967741102151635046, guid: 3aa1e957295188f4aa58626934f84427, type: 3}
       propertyPath: pullingForce
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 967741102151635046, guid: 3aa1e957295188f4aa58626934f84427, type: 3}
       propertyPath: stayingForce
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6570198727958145363, guid: 3aa1e957295188f4aa58626934f84427, type: 3}
       propertyPath: m_RootOrder
@@ -699,7 +703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6570198727958145364, guid: 3aa1e957295188f4aa58626934f84427, type: 3}
       propertyPath: m_Drag
-      value: 0.3
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6570198727958145364, guid: 3aa1e957295188f4aa58626934f84427, type: 3}
       propertyPath: m_AngularDrag

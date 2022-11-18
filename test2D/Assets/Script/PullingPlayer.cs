@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PullingPlayer : MonoBehaviour
 {
-    public float pullingForce;
-    public float stayingForce;
-    public float fadingSpeed;
+    public float pullingForce = 5f;
+    public float stayingForce=2f;
+
+    [Range(0.0f,1.0f)] 
+    public float fadingSpeed = 0.5f;
     private Rigidbody rb;
     void Start()
     {
@@ -30,8 +32,8 @@ public class PullingPlayer : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         Debug.Log("TriggerExit");
-        float x =rb.velocity.x/fadingSpeed;
-        float y= rb.velocity.y/fadingSpeed;
+        float x =rb.velocity.x*fadingSpeed;
+        float y= rb.velocity.y*fadingSpeed;
 
         rb.velocity= new Vector3(x,y,0);
     }

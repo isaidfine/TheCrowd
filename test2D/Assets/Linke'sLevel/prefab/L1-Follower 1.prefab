@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4214186027875092558}
   - component: {fileID: 3617397216089966378}
   - component: {fileID: 7528054187295542495}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: L1-Follower 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 6746356000083852779}
   - component: {fileID: 2361251483705247709}
   - component: {fileID: 8356518021041650468}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: pyramid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
