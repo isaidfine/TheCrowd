@@ -5,6 +5,8 @@ using UnityEngine;
 public class PullingPlayer : MonoBehaviour
 {
     public float pullingForce;
+    public float stayingForce;
+    public float fadingSpeed;
     private Rigidbody rb;
     void Start()
     {
@@ -19,7 +21,7 @@ public class PullingPlayer : MonoBehaviour
     }
     void OnTriggerStay(Collider other)
     {
-        Debug.Log("TriggerStay");
+        Debug.Log("TriggerEnter");
 
         Vector3 dir = other.gameObject.transform.position - this.gameObject.transform.position;
         rb.AddForce(dir * pullingForce);
@@ -28,8 +30,9 @@ public class PullingPlayer : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         Debug.Log("TriggerExit");
+        float x =rb.velocity.x/fadingSpeed;
+        float y= rb.velocity.y/fadingSpeed;
 
-        Vector3 dir = other.gameObject.transform.position - this.gameObject.transform.position;
-        rb.AddForce(dir * pullingForce);
+        rb.velocity= new Vector3(x,y,0);
     }
 }

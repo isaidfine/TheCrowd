@@ -267,7 +267,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 658469151}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.4, y: -24.8, z: 0}
+  m_LocalPosition: {x: 9.2, y: -24.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -641,6 +641,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 911352406299065908, guid: 3aa1e957295188f4aa58626934f84427, type: 3}
+      propertyPath: speed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 967741102151635046, guid: 3aa1e957295188f4aa58626934f84427, type: 3}
+      propertyPath: pullingForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 967741102151635046, guid: 3aa1e957295188f4aa58626934f84427, type: 3}
+      propertyPath: stayingForce
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6570198727958145363, guid: 3aa1e957295188f4aa58626934f84427, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -829,6 +841,10 @@ PrefabInstance:
       propertyPath: PathToFollow
       value: 
       objectReference: {fileID: 1519068685}
+    - target: {fileID: 81619968, guid: 1d967fd31bd691447abb865d5c67ad61, type: 3}
+      propertyPath: debugDrawShape
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 382065643842261975, guid: 1d967fd31bd691447abb865d5c67ad61, type: 3}
       propertyPath: m_Name
       value: Leader
