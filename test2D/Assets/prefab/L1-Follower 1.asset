@@ -43,7 +43,7 @@ MonoBehaviour:
   debugDrawSteering: 0
   debugDrawProperties: 0
   foldout: 1
-  effectiveRadius: 2
+  effectiveRadius: 5
   fieldOfView: 360
 --- !u!114 &11400000
 MonoBehaviour:
