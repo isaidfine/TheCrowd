@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - range
+  - Leader
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - crowd
   - Water
   - UI
   - 
