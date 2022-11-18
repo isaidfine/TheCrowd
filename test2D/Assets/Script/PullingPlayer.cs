@@ -23,10 +23,16 @@ public class PullingPlayer : MonoBehaviour
     }
     void OnTriggerStay(Collider other)
     {
-        Debug.Log("TriggerEnter");
+        
+        if(other.CompareTag("follower"))
+        {
+            Vector3 dir = other.gameObject.transform.position - this.gameObject.transform.position;
+            rb.AddForce(dir * pullingForce);
 
-        Vector3 dir = other.gameObject.transform.position - this.gameObject.transform.position;
-        rb.AddForce(dir * pullingForce);
+            Debug.Log("TriggerEnter!");
+        }
+
+        
     }
 
     void OnTriggerExit(Collider other)
