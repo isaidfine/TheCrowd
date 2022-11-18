@@ -131,6 +131,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pullingForce: 2
+  stayingForce: 0
+  fadingSpeed: 0
 --- !u!114 &911352406299065908
 MonoBehaviour:
   m_ObjectHideFlags: 0
