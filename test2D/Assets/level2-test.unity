@@ -711,9 +711,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1736237668}
   pushing: 0.1
-  leavingTime: 3
-  stillTime: 0.5
-  TickoutSpeed: 5
+  leavingTime: 4
+  stillTime: 1
+  TickoutSpeed: 1
   radius: 8
 --- !u!1 &1531031585
 GameObject:

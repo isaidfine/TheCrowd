@@ -23,7 +23,9 @@ public class circlePull : MonoBehaviour
 
     void FixedUpdate()
     {
+        
         dir =player.transform.position-this.gameObject.transform.position;
+        IsEnter();
         if(IsIn)
         {
             if(!IsTickingOut)
@@ -33,17 +35,18 @@ public class circlePull : MonoBehaviour
             }
             else
             {
-                speed +=(1-(dir.magnitude/radius))*TickoutSpeed*Time.deltaTime; 
+                speed +=(radius- dir.magnitude)*TickoutSpeed*Time.deltaTime; 
                 player.transform.position += speed*dir/dir.magnitude; 
             }
         }
         else if(!IsIn)
         {
-            if(IsTickingOut)
-            player.transform.position += speed*dir/dir.magnitude;
+                player.transform.position += speed*dir/dir.magnitude;
+                speed =Mathf.MoveTowards(speed,0.0f,leavingTime*Time.deltaTime);
+            
         }
 
-        IsEnter();
+        
 
     }
         
@@ -62,7 +65,6 @@ public class circlePull : MonoBehaviour
             if(IsIn)
             {
             IsTickingOut= false;
-            StartCoroutine(Leaving());
             StopCoroutine(Timer());
             Debug.Log("Leaving");
             IsIn = false;
@@ -81,13 +83,4 @@ public class circlePull : MonoBehaviour
             IsTickingOut= true;
         }
     }
-     IEnumerator Leaving()
-    {
-        yield return new WaitForSeconds(stillTime);
-        IsTickingOut = false;
-        speed=0;
-        StopCoroutine(Leaving());
-        Debug.Log("LeavingTriggered!!!");
-    }
-
 }
