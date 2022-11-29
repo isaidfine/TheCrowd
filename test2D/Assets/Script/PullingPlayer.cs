@@ -5,7 +5,7 @@ using UnityEngine;
 public class PullingPlayer : MonoBehaviour
 {
     public float pullingForce = 5f;
-    public float stayingForce=2f;
+    //public float stayingForce=2f;
 
     [Range(0.0f,1.0f)] 
     public float fadingSpeed = 0.5f;
