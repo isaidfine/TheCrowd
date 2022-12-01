@@ -5,9 +5,13 @@ using UnityEngine;
 public class WASDController_position : MonoBehaviour
 {
     public float movingSpeed;
+    public float Xmax;
+    public float Ymax;
     private float h;
     private float v;
     private Rigidbody rb;
+
+
     void Start()
     {
         
@@ -22,7 +26,9 @@ public class WASDController_position : MonoBehaviour
         Vector2 position = transform.position;
         position.x = position.x + movingSpeed * h * Time.deltaTime;
         position.y = position.y + movingSpeed * v * Time.deltaTime;
-       // transform.LookAt(position);
+        position.x = Mathf.Clamp(position.x, -Xmax, Xmax);
+        position.y = Mathf.Clamp(position.y, -Ymax, Ymax);
+        // transform.LookAt(position);
         transform.position = position;
 
 

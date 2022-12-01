@@ -38,14 +38,19 @@ public class findPath : MonoBehaviour {
         //transform.position = Vector3.MoveTowards(transform.position, PathToFollow.path_objs[CurrentWayPointID].position, Time.deltaTime * Speed);
         if (distance <= reachDistance)
         {          
-            PathToFollow.path_objs[CurrentWayPointID].gameObject.SetActive(false);
-            //CurrentWayPointID++;
+            PathToFollow.path_objs[CurrentWayPointID].gameObject.GetComponent<Renderer>().enabled=false;
+            CurrentWayPointID++;
             Debug.Log("find"+CurrentWayPointID);
 
         }
         if (CurrentWayPointID >= PathToFollow.path_objs.Count)
         {
             Debug.Log("finished!");
+            //Time.timeScale = 0.0f;
+            GetComponent<WASDController_position>().enabled = false;
+            GetComponent<PullingPlayer>().enabled = false;
+            GetComponent<cutScene1>().enabled = true;
+
         }
     }
 }
