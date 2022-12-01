@@ -9,6 +9,7 @@ public class L2avoidPlayer : MonoBehaviour
     public float rotateSpeed;
     public float watchingDistance;
     public GameObject player;
+    public Transform LookingPoint;
 
     private Quaternion OriginalRotation;
     private bool isRotate =false;
@@ -19,7 +20,7 @@ public class L2avoidPlayer : MonoBehaviour
     void awake (){
 
         OriginalRotation= this.transform.rotation;
-        // OriginalPosition= this .transform.position;
+        //OriginalPosition= this.transform.position;
 
     }
  
@@ -34,7 +35,7 @@ public class L2avoidPlayer : MonoBehaviour
        // {
             if (false)
             {
-                Vector3 vec = (player.transform.position - transform.position);
+                Vector3 vec = LookingPoint.position;
                 Quaternion rotate = Quaternion.LookRotation(vec);
                 transform.localRotation = Quaternion.Slerp(transform.localRotation, rotate, rotateSpeed);
                 if (Vector3.Angle(vec, transform.forward) < 0.1f)
@@ -42,13 +43,15 @@ public class L2avoidPlayer : MonoBehaviour
                     isRotate = false;
                 }
             }           
-     if(IsSet) transform.position = Vector3.MoveTowards(transform.position, pos, stepBackSpeed*Time.deltaTime); 
+        if (IsSet) transform.position = Vector3.MoveTowards(transform.position, pos, stepBackSpeed*Time.deltaTime);
+
  
 }
 IEnumerator GetPosition()
 {
-    yield return new WaitForSeconds(1.0f);
-    IsSet= true;
+    yield return new WaitForSeconds(2.0f);
+        Debug.Log("stepping back");
+        IsSet = true;
     pos = this.transform.position;
     OriginalPosition= this .transform.position;
     //transform.position = Vector3.MoveTowards(transform.position, OriginalPosition, stepBackSpeed*Time.deltaTime);

@@ -581,7 +581,7 @@ MonoBehaviour:
   PathToFollow: {fileID: 1535908224}
   CurrentWayPointID: 0
   Speed: 0
-  reachDistance: 1
+  reachDistance: 5
   PathName: PlayerPath
 --- !u!1 &1117754534
 GameObject:
@@ -675,6 +675,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1514569596797323214, guid: cfd32f294a00d884f8ecaf43d45dab03, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6667383564361315492, guid: cfd32f294a00d884f8ecaf43d45dab03, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -790,7 +794,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1385211392
 MonoBehaviour:
   m_ObjectHideFlags: 0
