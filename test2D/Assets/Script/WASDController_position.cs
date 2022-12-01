@@ -22,6 +22,7 @@ public class WASDController_position : MonoBehaviour
         Vector2 position = transform.position;
         position.x = position.x + movingSpeed * h * Time.deltaTime;
         position.y = position.y + movingSpeed * v * Time.deltaTime;
+       // transform.LookAt(position);
         transform.position = position;
 
 
