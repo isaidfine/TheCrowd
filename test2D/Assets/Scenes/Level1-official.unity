@@ -782,6 +782,10 @@ PrefabInstance:
       propertyPath: m_AngularDrag
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 6570198727958145364, guid: 3aa1e957295188f4aa58626934f84427, type: 3}
+      propertyPath: m_Constraints
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 6570198727958145366, guid: 3aa1e957295188f4aa58626934f84427, type: 3}
       propertyPath: m_Name
       value: PlayerPulledByFollowers
