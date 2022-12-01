@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class border : MonoBehaviour
 {
-    public Vector3 startPoint;// Start is called before the first frame update
+    public GameObject startPoint;
+    // Start is called before the first frame update
     void Start()
     {
         
@@ -20,7 +21,7 @@ public class border : MonoBehaviour
     {
         if(other.gameObject.tag =="Player")
         {
-            other.transform.position = startPoint;
+            other.transform.position = startPoint.transform.position;
 
         }
     }
