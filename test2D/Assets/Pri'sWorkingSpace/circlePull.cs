@@ -41,8 +41,11 @@ public class circlePull : MonoBehaviour
         }
         else if(!IsIn)
         {
+            if ( IsTickingOut)
+            {
                 player.transform.position += speed*dir/dir.magnitude;
                 speed =Mathf.MoveTowards(speed,0.0f,leavingTime*Time.deltaTime);
+            }
             
         }
 
@@ -64,8 +67,8 @@ public class circlePull : MonoBehaviour
         {
             if(IsIn)
             {
-            IsTickingOut= false;
             StopCoroutine(Timer());
+            StartCoroutine(Tickingout());
             Debug.Log("Leaving");
             IsIn = false;
             }
@@ -83,4 +86,14 @@ public class circlePull : MonoBehaviour
             IsTickingOut= true;
         }
     }
+
+        IEnumerator Tickingout()
+        {
+            player.GetComponent<WASDController_position>().enabled=false;
+            
+            yield return new WaitForSeconds(stillTime);
+            player.GetComponent<WASDController_position>().enabled=true;
+            IsTickingOut = false;
+
+        }
 }
