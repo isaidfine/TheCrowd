@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class circleCrowd1 : MonoBehaviour
 {
-    public int peopleNum = 30;
+    public int peopleNum;
     public GameObject prefab;
     public GameObject circlePoint;
     public int radius;

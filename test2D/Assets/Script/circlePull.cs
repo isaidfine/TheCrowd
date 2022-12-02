@@ -16,6 +16,11 @@ public class circlePull : MonoBehaviour
     private bool IsTickingOut;
     private bool IsIn;
 
+void OnDrawGizmos(){
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireSphere(transform.position, radius);
+            }
+
     void Start()
     {
         

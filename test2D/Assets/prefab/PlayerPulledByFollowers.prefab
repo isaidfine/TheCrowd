@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 967741102151635046}
   - component: {fileID: 911352406299065908}
   - component: {fileID: -6019112027615227130}
+  - component: {fileID: 8865926362588890456}
   m_Layer: 0
   m_Name: PlayerPulledByFollowers
   m_TagString: Untagged
@@ -194,6 +195,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingSpeed: 0
+  Xmax: 0
+  Ymax: 0
+--- !u!95 &8865926362588890456
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6570198727958145366}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: caad89f5248f8bd40a2a823883d7a6fa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8074152455811382308
 GameObject:
   m_ObjectHideFlags: 0
