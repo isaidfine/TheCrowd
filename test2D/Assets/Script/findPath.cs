@@ -6,9 +6,9 @@ public class findPath : MonoBehaviour {
     public bool StartFollow = false;
     public path PathToFollow;
     public int CurrentWayPointID = 0;
-    public float Speed;//移动速度
-    public float reachDistance = 0f;//里路径点的最大范围
-    public string PathName;//跟随路径的名字
+    public float Speed;
+    public float reachDistance = 0f;
+    public string PathName;
     private string LastName;
     private bool ChangePath = true;
 
@@ -49,6 +49,7 @@ public class findPath : MonoBehaviour {
             GetComponent<WASDController_position>().enabled = false;
             GetComponent<PullingPlayer>().enabled = false;
             GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
+            GetComponent<SphereCollider>().enabled=false;
             //transform.GetChild(0).GetComponent<Animation>().enabled = true;
             GetComponent<cutScene1>().enabled = true;
 
