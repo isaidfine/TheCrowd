@@ -11,6 +11,8 @@ public class circlePull : MonoBehaviour
     public float TickoutSpeed;
     public float radius;
     public float maxSpeed;
+    public List<Transform> otherCircle = new List<Transform>();
+    Transform[] theArray;
 
     private float speed;
     private Vector3 dir;
@@ -53,11 +55,10 @@ void OnDrawGizmos(){
         {
                 if(speed>0)
                 {
-                    
-
+                    CloseOtherCircle();
                     speed =Mathf.MoveTowards(speed,0.0f,Time.deltaTime);
                 }
-            
+                if (speed <= 0) OpenOtherCircle();            
         }
         speed =Mathf.Clamp(speed,0.0f,maxSpeed);       
         player.transform.position += speed*dir/dir.magnitude;
@@ -91,7 +92,19 @@ void OnDrawGizmos(){
             
         }
     }
+    void CloseOtherCircle()
+    {
+        for(int i = 0;i<otherCircle.Count;i++){
+            otherCircle[i].gameObject.SetActive(false);
+            }
+    }
 
+        void OpenOtherCircle()
+    {
+        for(int i = 0;i<otherCircle.Count;i++){
+            otherCircle[i].gameObject.SetActive(true);
+            }
+    }
 
 
     IEnumerator Timer()
