@@ -17,6 +17,9 @@ public class circlePull : MonoBehaviour
     private bool IsTickingOut;
     private bool IsIn;
 
+    IEnumerator timer;
+    IEnumerator tick;
+
 void OnDrawGizmos(){
         Gizmos.color = Color.white;
         Gizmos.DrawWireSphere(transform.position, radius);
@@ -24,6 +27,8 @@ void OnDrawGizmos(){
 
     void Start()
     {
+        timer= Timer();
+        tick = TickingOut();
         
     }
 
@@ -68,7 +73,7 @@ void OnDrawGizmos(){
         {
             if(!IsIn)
             {
-            StartCoroutine(Timer());
+            StartCoroutine(timer);
             IsIn = true;
             }
         }
@@ -76,10 +81,10 @@ void OnDrawGizmos(){
         {
             if(IsIn)
             {
-            StopCoroutine(Timer());
+            StopCoroutine(timer);
             if (IsTickingOut)
             {
-                StartCoroutine(Tickingout());
+                StartCoroutine(tick);
             }
             IsIn = false;
             }
@@ -95,11 +100,12 @@ void OnDrawGizmos(){
         {
             yield return new WaitForSeconds(leavingTime);
             IsTickingOut= true;
+            StopCoroutine(timer);
 
         }
     }
 
-        IEnumerator Tickingout()
+        IEnumerator TickingOut()
         {
             player.GetComponent<WASDController_position>().enabled=false;
             //player.GetComponent<Collider2D>().enabled=false;
