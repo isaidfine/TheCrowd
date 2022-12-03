@@ -29,7 +29,7 @@ public class circleCrowd1 : MonoBehaviour
             //var index = Random.Range(0, list.Count);
             //var pos = list[index];
             var pos=list[i];
-            GameObject.Instantiate(prefab).transform.position = pos;
+            GameObject.Instantiate(prefab).transform.position = pos+circlePoint.transform.position;
             //list.RemoveAt(index);
             list.RemoveAt(i);
         }

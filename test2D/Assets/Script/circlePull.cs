@@ -36,23 +36,23 @@ void OnDrawGizmos(){
             if(!IsTickingOut)
             {
             speed+= pushing*Time.deltaTime;
-            player.transform.position += speed*dir/dir.magnitude;
+
             }
             else
             {
                 speed +=(radius- dir.magnitude)*TickoutSpeed*Time.deltaTime; 
-                player.transform.position += speed*dir/dir.magnitude; 
             }
         }
         else if(!IsIn)
         {
             if ( IsTickingOut)
             {
-                player.transform.position += speed*dir/dir.magnitude;
-                speed =Mathf.MoveTowards(speed,0.0f,leavingTime*Time.deltaTime);
+
+                speed =Mathf.MoveTowards(speed,0.0f,stillTime*Time.deltaTime);
             }
             
         }
+        player.transform.position += speed*dir/dir.magnitude;
 
         
 
@@ -68,13 +68,15 @@ void OnDrawGizmos(){
             IsIn = true;
             }
         }
-        else if (dir.magnitude > radius) 
+        else if (dir.magnitude >= radius) 
         {
             if(IsIn)
             {
             StopCoroutine(Timer());
-            StartCoroutine(Tickingout());
-            Debug.Log("Leaving");
+            if (IsTickingOut)
+            {
+                StartCoroutine(Tickingout());
+            }
             IsIn = false;
             }
             
@@ -89,15 +91,19 @@ void OnDrawGizmos(){
         {
             yield return new WaitForSeconds(leavingTime);
             IsTickingOut= true;
+            StopCoroutine(Timer());
         }
     }
 
         IEnumerator Tickingout()
         {
             player.GetComponent<WASDController_position>().enabled=false;
-            
+            //player.GetComponent<Collider2D>().enabled=false;
+
             yield return new WaitForSeconds(stillTime);
+
             player.GetComponent<WASDController_position>().enabled=true;
+            //player.GetComponent<Collider2D>().enabled=true;
             IsTickingOut = false;
 
         }
