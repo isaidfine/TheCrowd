@@ -1105,9 +1105,10 @@ MonoBehaviour:
   player: {fileID: 1736237668}
   pushing: 1
   leavingTime: 2
-  stillTime: 0.5
+  stillTime: 0.3
   TickoutSpeed: 2
   radius: 15
+  maxSpeed: 3
 --- !u!114 &2039796085
 MonoBehaviour:
   m_ObjectHideFlags: 0

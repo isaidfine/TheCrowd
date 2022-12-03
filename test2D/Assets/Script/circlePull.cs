@@ -10,6 +10,7 @@ public class circlePull : MonoBehaviour
     public float stillTime;
     public float TickoutSpeed;
     public float radius;
+    public float maxSpeed;
 
     private float speed;
     private Vector3 dir;
@@ -45,14 +46,17 @@ void OnDrawGizmos(){
         }
         else if(!IsIn)
         {
-            if ( IsTickingOut)
-            {
+                if(speed>0)
+                {
+                    
 
-                speed =Mathf.MoveTowards(speed,0.0f,stillTime*Time.deltaTime);
-            }
+                    speed =Mathf.MoveTowards(speed,0.0f,Time.deltaTime);
+                }
             
         }
+        speed =Mathf.Clamp(speed,0.0f,maxSpeed);       
         player.transform.position += speed*dir/dir.magnitude;
+        
 
         
 
@@ -91,7 +95,7 @@ void OnDrawGizmos(){
         {
             yield return new WaitForSeconds(leavingTime);
             IsTickingOut= true;
-            StopCoroutine(Timer());
+
         }
     }
 
