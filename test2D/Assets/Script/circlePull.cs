@@ -67,8 +67,9 @@ void OnDrawGizmos(){
 
             }
                 if(speed>0)
-                {    
-                    speed =Mathf.MoveTowards(speed,0.0f,speed/stillTime*Time.deltaTime);
+                {
+                    CloseOtherCircle();
+                    speed =Mathf.MoveTowards(speed,0.0f,stillTime);
                 }
                 if (speed <= 0) OpenOtherCircle();            
         }
