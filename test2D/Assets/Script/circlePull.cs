@@ -41,7 +41,6 @@ void OnDrawGizmos(){
     void FixedUpdate()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y, 0.0f);
-        tickingTimer += Time.deltaTime;
         dir =player.transform.position-this.gameObject.transform.position;
         IsEnter();
         if(IsIn)
@@ -56,6 +55,7 @@ void OnDrawGizmos(){
             {
                 speed += TickoutSpeed*Time.deltaTime;
                 IsTickingOut = true;
+                tickingTimer=0;
             }
         }
 
@@ -66,17 +66,16 @@ void OnDrawGizmos(){
                 player.GetComponent<mouseController>().enabled=false;
                 tickingTimer += Time.deltaTime;
                 CloseOtherCircle();
-                speed =Mathf.MoveTowards(speed,0.0f,stillTime*Time.deltaTime);
-                   
-        }
-        if (tickingTimer>= stillTime)
-                {
+                
+                   if (tickingTimer>= stillTime)
+                    {
                     player.GetComponent<mouseController>().enabled=true;
                     OpenOtherCircle(); 
                     IsTickingOut=false;
                     speed=0;
                     tickingTimer=0;
                 }    
+        }speed =Mathf.MoveTowards(speed,0.0f,speed/stillTime*Time.deltaTime);
         }
         speed =Mathf.Clamp(speed,0.0f,maxSpeed);       
         player.transform.position += speed*dir/dir.magnitude;
@@ -96,17 +95,14 @@ void OnDrawGizmos(){
         {
             if(IsIn)
             {
-            IsIn = false;
-            CloseOtherCircle();
-            stayingTimer=0;
+            IsIn = false;           
             if (IsTickingOut)
-            {
-                //StartCoroutine(tick);
-                tickingTimer=0;
+                {
+                    CloseOtherCircle();//StartCoroutine(tick);
+                    tickingTimer=0;
+                }
             }
-            
-            }
-            
+            stayingTimer=0;
         }
     }
     void CloseOtherCircle()
@@ -122,30 +118,5 @@ void OnDrawGizmos(){
             otherCircle[i].gameObject.SetActive(true);
             }
     }
-
-
-    IEnumerator Timer()
-    {
-        if(!IsTickingOut)
-        {
-            yield return new WaitForSeconds(stayingTime);
-            IsTickingOut= true;
-            StopCoroutine(timer);
-
-        }
-    }
-
-        IEnumerator TickingOut()
-        {
-            player.GetComponent<WASDController_position>().enabled=false;
-            //player.GetComponent<Collider2D>().enabled=false;
-
-            yield return new WaitForSeconds(stillTime);
-
-            player.GetComponent<WASDController_position>().enabled=true;
-            //player.GetComponent<Collider2D>().enabled=true;
-            IsTickingOut = false;
-
-        }
 
 }

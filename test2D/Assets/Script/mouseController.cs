@@ -11,6 +11,7 @@ public class mouseController : MonoBehaviour
     private Vector3 dir;
     private float timer;
     private float acceleration;
+    private float dirMag;
 
     void Start()
     {
@@ -37,9 +38,11 @@ public class mouseController : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             timer+= Time.deltaTime;
-            acceleration= speed*timer*timer;
+            acceleration= speed*timer;
             acceleration= Mathf.Clamp(acceleration,0.0f,MaxSpeed);
-            transform.Translate(dir/2.0f*acceleration*Time.deltaTime,Space.World);
+            dirMag= Mathf.Clamp(dir.magnitude,0.0f,5.0f);
+
+            transform.Translate(dir/dir.magnitude*dirMag*acceleration*Time.deltaTime,Space.World);
         }
 
         
