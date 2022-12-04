@@ -39,7 +39,7 @@ public class mouseController : MonoBehaviour
             timer+= Time.deltaTime;
             acceleration= speed*timer*timer;
             acceleration= Mathf.Clamp(acceleration,0.0f,MaxSpeed);
-            transform.Translate(dir*acceleration*Time.deltaTime,Space.World);
+            transform.Translate(dir/2.0f*acceleration*Time.deltaTime,Space.World);
         }
 
         

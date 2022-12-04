@@ -49,7 +49,7 @@ void OnDrawGizmos(){
             stayingTimer += Time.deltaTime;
             if (stayingTimer<stayingTime)
             {
-                speed+= (radius- dir.magnitude)*pushing*Time.deltaTime;
+                speed+= (radius- dir.magnitude)/10.0f*pushing*Time.deltaTime;
 
             }
             else if(stayingTimer>= stayingTime)
@@ -63,15 +63,20 @@ void OnDrawGizmos(){
         {
             if (IsTickingOut)
             {
+                player.GetComponent<mouseController>().enabled=false;
                 tickingTimer += Time.deltaTime;
-
-            }
-                if(speed>0)
+                CloseOtherCircle();
+                speed =Mathf.MoveTowards(speed,0.0f,stillTime*Time.deltaTime);
+                   
+        }
+        if (tickingTimer>= stillTime)
                 {
-                    CloseOtherCircle();
-                    speed =Mathf.MoveTowards(speed,0.0f,stillTime);
-                }
-                if (speed <= 0) OpenOtherCircle();            
+                    player.GetComponent<mouseController>().enabled=true;
+                    OpenOtherCircle(); 
+                    IsTickingOut=false;
+                    speed=0;
+                    tickingTimer=0;
+                }    
         }
         speed =Mathf.Clamp(speed,0.0f,maxSpeed);       
         player.transform.position += speed*dir/dir.magnitude;
@@ -142,4 +147,5 @@ void OnDrawGizmos(){
             IsTickingOut = false;
 
         }
+
 }

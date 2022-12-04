@@ -1121,8 +1121,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1736237668}
   pushing: 0.8
-  stayingTime: 0
-  stillTime: 0.3
+  stayingTime: 2
+  stillTime: 0.5
   TickoutSpeed: 2
   radius: 18
   maxSpeed: 2
@@ -1361,8 +1361,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1736237668}
   pushing: 0.8
-  stayingTime: 0
-  stillTime: 0.3
+  stayingTime: 2
+  stillTime: 0.5
   TickoutSpeed: 2
   radius: 20
   maxSpeed: 2
@@ -1640,8 +1640,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1736237668}
   pushing: 0.8
-  stayingTime: 0
-  stillTime: 0.3
+  stayingTime: 2
+  stillTime: 0.5
   TickoutSpeed: 2
   radius: 27.3
   maxSpeed: 2
@@ -1802,7 +1802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1736237668}
   pushing: 0.8
-  stayingTime: 0
+  stayingTime: 2
   stillTime: 0.5
   TickoutSpeed: 2
   radius: 23
@@ -2487,8 +2487,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1736237668}
   pushing: 0.8
-  stayingTime: 0
-  stillTime: 0.3
+  stayingTime: 2
+  stillTime: 0.5
   TickoutSpeed: 2
   radius: 35.97
   maxSpeed: 2
@@ -2594,9 +2594,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1736237668}
   pushing: 0.8
-  stayingTime: 0
+  stayingTime: 2
   stillTime: 0.5
-  TickoutSpeed: 2
+  TickoutSpeed: 5
   radius: 26
   maxSpeed: 2
   otherCircle:
