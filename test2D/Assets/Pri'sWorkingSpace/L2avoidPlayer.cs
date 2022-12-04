@@ -50,7 +50,6 @@ public class L2avoidPlayer : MonoBehaviour
 IEnumerator GetPosition()
 {
     yield return new WaitForSeconds(2.0f);
-        Debug.Log("stepping back");
         IsSet = true;
     pos = this.transform.position;
     OriginalPosition= this .transform.position;

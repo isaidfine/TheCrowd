@@ -9,6 +9,8 @@ public class circleCrowd1 : MonoBehaviour
     public GameObject circlePoint;
     public int radius;
     public int z;
+    public float MaxX;
+    public float MaxY;
  
     void Start()
     {
@@ -29,7 +31,10 @@ public class circleCrowd1 : MonoBehaviour
             //var index = Random.Range(0, list.Count);
             //var pos = list[index];
             var pos=list[i];
-            GameObject.Instantiate(prefab).transform.position = pos+circlePoint.transform.position;
+            if (Mathf.Abs(pos.x+circlePoint.transform.position.x)<MaxX && Mathf.Abs(pos.y+circlePoint.transform.position.y)<MaxY)
+            {
+                GameObject.Instantiate(prefab).transform.position = pos+circlePoint.transform.position;
+            }  
             //list.RemoveAt(index);
             list.RemoveAt(i);
         }

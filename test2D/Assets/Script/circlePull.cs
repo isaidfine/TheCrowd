@@ -6,7 +6,7 @@ public class circlePull : MonoBehaviour
 {
    public GameObject player;
     public float pushing;
-    public float leavingTime;
+    public float stayingTime;
     public float stillTime;
     public float TickoutSpeed;
     public float radius;
@@ -20,7 +20,9 @@ public class circlePull : MonoBehaviour
     private bool IsIn;
 
     IEnumerator timer;
+    private float stayingTimer;
     IEnumerator tick;
+    private float tickingTimer;
 
 void OnDrawGizmos(){
         Gizmos.color = Color.white;
@@ -29,43 +31,49 @@ void OnDrawGizmos(){
 
     void Start()
     {
-        timer= Timer();
-        tick = TickingOut();
+        //timer= Timer();
+        //tick = TickingOut();
+        stayingTimer=0;
+        tickingTimer=0;
         
     }
 
     void FixedUpdate()
     {
         
+        tickingTimer += Time.deltaTime;
         dir =player.transform.position-this.gameObject.transform.position;
         IsEnter();
         if(IsIn)
         {
-            if(!IsTickingOut)
+            stayingTimer += Time.deltaTime;
+            if (stayingTimer<stayingTime)
             {
-            speed+= pushing*Time.deltaTime;
+                speed+= (radius- dir.magnitude)*pushing*Time.deltaTime;
 
             }
-            else
+            else if(stayingTimer>= stayingTime)
             {
-                speed +=(radius- dir.magnitude)*TickoutSpeed*Time.deltaTime; 
+                speed += TickoutSpeed*Time.deltaTime;
+                IsTickingOut = true;
             }
         }
+
         else if(!IsIn)
         {
+            if (IsTickingOut)
+            {
+                tickingTimer += Time.deltaTime;
+
+            }
                 if(speed>0)
-                {
-                    CloseOtherCircle();
-                    speed =Mathf.MoveTowards(speed,0.0f,stillTime);
+                {    
+                    speed =Mathf.MoveTowards(speed,0.0f,speed/stillTime*Time.deltaTime);
                 }
                 if (speed <= 0) OpenOtherCircle();            
         }
         speed =Mathf.Clamp(speed,0.0f,maxSpeed);       
         player.transform.position += speed*dir/dir.magnitude;
-        
-
-        
-
     }
         
     void IsEnter()
@@ -74,7 +82,7 @@ void OnDrawGizmos(){
         {
             if(!IsIn)
             {
-            StartCoroutine(timer);
+            stayingTimer=0;
             IsIn = true;
             }
         }
@@ -82,12 +90,15 @@ void OnDrawGizmos(){
         {
             if(IsIn)
             {
-            StopCoroutine(timer);
+            IsIn = false;
+            CloseOtherCircle();
+            stayingTimer=0;
             if (IsTickingOut)
             {
-                StartCoroutine(tick);
+                //StartCoroutine(tick);
+                tickingTimer=0;
             }
-            IsIn = false;
+            
             }
             
         }
@@ -111,7 +122,7 @@ void OnDrawGizmos(){
     {
         if(!IsTickingOut)
         {
-            yield return new WaitForSeconds(leavingTime);
+            yield return new WaitForSeconds(stayingTime);
             IsTickingOut= true;
             StopCoroutine(timer);
 
