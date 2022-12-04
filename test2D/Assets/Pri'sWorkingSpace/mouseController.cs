@@ -6,6 +6,7 @@ public class mouseController : MonoBehaviour
 {
 
     public float speed;
+    public float MaxSpeed;
 
     private Vector3 dir;
     private float timer;
@@ -37,6 +38,7 @@ public class mouseController : MonoBehaviour
         {
             timer+= Time.deltaTime;
             acceleration= speed*timer*timer;
+            acceleration= Mathf.Clamp(acceleration,0.0f,MaxSpeed);
             transform.Translate(dir*acceleration*Time.deltaTime,Space.World);
         }
 
