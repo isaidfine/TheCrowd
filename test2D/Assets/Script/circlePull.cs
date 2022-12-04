@@ -40,7 +40,7 @@ void OnDrawGizmos(){
 
     void FixedUpdate()
     {
-        
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0.0f);
         tickingTimer += Time.deltaTime;
         dir =player.transform.position-this.gameObject.transform.position;
         IsEnter();
