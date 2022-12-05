@@ -2232,6 +2232,7 @@ GameObject:
   - component: {fileID: 1736237676}
   - component: {fileID: 1736237677}
   - component: {fileID: 1736237678}
+  - component: {fileID: 1736237679}
   m_Layer: 0
   m_Name: L2-player
   m_TagString: Player
@@ -2327,7 +2328,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1736237668}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5da95a2b93454b4f9e6781ed74cd18f, type: 3}
   m_Name: 
@@ -2371,6 +2372,22 @@ MonoBehaviour:
   Speed: 0
   reachDistance: 5
   PathName: path
+--- !u!114 &1736237679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736237668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d717e839c2525c840ade1d66442cbd90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range1: 0
+  range2: 100
+  maxSpeed: 70
+  accel: 50
 --- !u!1 &1765494549
 GameObject:
   m_ObjectHideFlags: 0

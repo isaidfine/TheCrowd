@@ -21,10 +21,18 @@ public class MouseSteer : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        Cursor.visible = true;
+
+    }
+
     // Update is called once per frame
     void Update()
     {
+
         var target = GetMousePosition();
+        transform.LookAt(target,Vector3.back);
         var targetOffset = target - Position;
         float distance = targetOffset.magnitude;
 
@@ -34,9 +42,11 @@ public class MouseSteer : MonoBehaviour
         
         Vector2 steering = desiredVelocity - velocity;
 
+     if (Input.GetMouseButton(0))
+       {
         velocity += steering * Time.fixedDeltaTime * accel;
         Position += velocity * Time.fixedDeltaTime;
-
+       }
     }
 
     private Vector2 GetMousePosition()
