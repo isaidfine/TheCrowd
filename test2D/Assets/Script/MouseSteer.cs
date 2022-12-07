@@ -25,7 +25,7 @@ public class MouseSteer : MonoBehaviour
     void Start()
     {
         Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.Confined;
+        //Cursor.lockState = CursorLockMode.Confined;
 
     }
 
