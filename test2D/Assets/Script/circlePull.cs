@@ -67,13 +67,13 @@ void OnDrawGizmos(){
         {
             if (IsTickingOut)
             {
-                player.GetComponent<mouseController>().enabled=false;
+                player.GetComponent<MouseSteer>().enabled=false;
                 tickingTimer += Time.deltaTime;
                 CloseOtherCircle();
                 
                    if (tickingTimer>= stillTime)
                     {
-                    player.GetComponent<mouseController>().enabled=true;
+                    player.GetComponent<MouseSteer>().enabled=true;
                     OpenOtherCircle(); 
                     IsTickingOut=false;
                     speed=0;
