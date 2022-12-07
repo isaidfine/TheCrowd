@@ -52,12 +52,12 @@ void OnDrawGizmos(){
             stayingTimer += Time.deltaTime;
             if (stayingTimer<stayingTime)
             {
-                speed+= (radius- dir.magnitude)/dir.magnitude*pushing*Time.deltaTime;
+                speed= (radius- dir.magnitude)/dir.magnitude*pushing;
 
             }
             else if(stayingTimer>= stayingTime)
             {
-                speed += TickoutSpeed*Time.deltaTime;
+                speed = TickoutSpeed;
                 IsTickingOut = true;
                 //tickingTimer=0;
             }
