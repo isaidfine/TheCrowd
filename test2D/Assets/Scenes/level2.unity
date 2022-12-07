@@ -395,11 +395,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1736237668}
   pushing: 0.8
+  maxSpeed: 2
+  TickoutSpeed: 2
   stayingTime: 0
   stillTime: 0.3
-  TickoutSpeed: 2
   radius: 27.1
-  maxSpeed: 2
   otherCircle:
   - {fileID: 700805306}
   - {fileID: 1706967462}
@@ -1121,11 +1121,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1736237668}
   pushing: 0.7
-  stayingTime: 2
-  stillTime: 0.5
-  TickoutSpeed: 2
-  radius: 18
   maxSpeed: 2
+  TickoutSpeed: 2
+  stayingTime: 1
+  stillTime: 0.5
+  radius: 18
   otherCircle:
   - {fileID: 700805306}
   - {fileID: 1293106116}
@@ -1361,11 +1361,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1736237668}
   pushing: 0.7
-  stayingTime: 2
-  stillTime: 0.5
-  TickoutSpeed: 2
-  radius: 20
   maxSpeed: 2
+  TickoutSpeed: 2
+  stayingTime: 1
+  stillTime: 0.5
+  radius: 20
   otherCircle:
   - {fileID: 1293106116}
   - {fileID: 700805306}
@@ -1640,11 +1640,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1736237668}
   pushing: 0.7
-  stayingTime: 2
-  stillTime: 0.5
-  TickoutSpeed: 2
-  radius: 27.3
   maxSpeed: 2
+  TickoutSpeed: 2
+  stayingTime: 1
+  stillTime: 0.5
+  radius: 27.3
   otherCircle:
   - {fileID: 1293106116}
   - {fileID: 700805306}
@@ -1802,11 +1802,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1736237668}
   pushing: 0.5
-  stayingTime: 2
-  stillTime: 0.5
-  TickoutSpeed: 2
-  radius: 23
   maxSpeed: 2
+  TickoutSpeed: 2
+  stayingTime: 1
+  stillTime: 0.5
+  radius: 23
   otherCircle:
   - {fileID: 1293106116}
   - {fileID: 1706967462}
@@ -2580,11 +2580,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1736237668}
   pushing: 0.7
-  stayingTime: 2
-  stillTime: 0.5
-  TickoutSpeed: 2
-  radius: 35.97
   maxSpeed: 2
+  TickoutSpeed: 2
+  stayingTime: 1
+  stillTime: 0.5
+  radius: 25
   otherCircle:
   - {fileID: 1293106116}
   - {fileID: 700805306}
@@ -2600,7 +2600,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978350864}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 4.6, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2631,7 +2631,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2015725709}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.211098, y: -77.2, z: 2.3483942}
+  m_LocalPosition: {x: 25.211098, y: -70.3, z: 2.3483942}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2687,11 +2687,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1736237668}
   pushing: 0.7
-  stayingTime: 2
-  stillTime: 0.5
-  TickoutSpeed: 3
-  radius: 26
   maxSpeed: 2
+  TickoutSpeed: 3
+  stayingTime: 1
+  stillTime: 0.5
+  radius: 26
   otherCircle:
   - {fileID: 700805306}
   - {fileID: 1706967462}

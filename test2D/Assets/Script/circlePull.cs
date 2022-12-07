@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class circlePull : MonoBehaviour
 {
-   public GameObject player;
+    
+    public GameObject player;
     public float pushing;
+    public float maxSpeed;
+    public float TickoutSpeed;
+    [Header(" ")]
     public float stayingTime;
     public float stillTime;
-    public float TickoutSpeed;
+    
     public float radius;
-    public float maxSpeed;
+    
     public List<Transform> otherCircle = new List<Transform>();
     Transform[] theArray;
 
@@ -48,14 +52,14 @@ void OnDrawGizmos(){
             stayingTimer += Time.deltaTime;
             if (stayingTimer<stayingTime)
             {
-                speed+= (radius- dir.magnitude)/10.0f*pushing*Time.deltaTime;
+                speed+= (radius- dir.magnitude)/dir.magnitude*pushing*Time.deltaTime;
 
             }
             else if(stayingTimer>= stayingTime)
             {
                 speed += TickoutSpeed*Time.deltaTime;
                 IsTickingOut = true;
-                tickingTimer=0;
+                //tickingTimer=0;
             }
         }
 
@@ -87,7 +91,7 @@ void OnDrawGizmos(){
         {
             if(!IsIn)
             {
-            stayingTimer=0;
+            //stayingTimer=0;
             IsIn = true;
             }
         }

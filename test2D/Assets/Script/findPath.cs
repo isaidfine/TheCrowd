@@ -46,7 +46,7 @@ public class findPath : MonoBehaviour {
         if (CurrentWayPointID >= PathToFollow.path_objs.Count)
         {
             Debug.Log("finished!");
-            GetComponent<WASDController_position>().enabled = false;
+            GetComponent<MouseSteer>().enabled = false;
             GetComponent<PullingPlayer>().enabled = false;
             GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
             GetComponent<SphereCollider>().enabled=false;
