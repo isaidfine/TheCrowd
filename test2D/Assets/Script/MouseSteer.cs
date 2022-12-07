@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MouseSteer : MonoBehaviour
 {
@@ -24,12 +25,17 @@ public class MouseSteer : MonoBehaviour
     void Start()
     {
         Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
 
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void FixedUpdate()
+    { 
+        if( Input. GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(1);
+        }
 
         var target = GetMousePosition();
         transform.LookAt(target,Vector3.back);
