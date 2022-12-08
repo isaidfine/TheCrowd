@@ -327,7 +327,7 @@ Transform:
   - {fileID: 2015725710}
   - {fileID: 564701135}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &222582497
 GameObject:
@@ -557,7 +557,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &414231837 stripped
 Transform:
@@ -618,7 +618,7 @@ Transform:
   - {fileID: 164064030}
   - {fileID: 774036032}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &543610370
 GameObject:
@@ -854,6 +854,63 @@ Transform:
   m_Father: {fileID: 206435457}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &680868000
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4847833655450630460, guid: b3415563ecaa9cb489758f3bfffdb369, type: 3}
+      propertyPath: m_Name
+      value: LevelLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847833655450630463, guid: b3415563ecaa9cb489758f3bfffdb369, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847833655450630463, guid: b3415563ecaa9cb489758f3bfffdb369, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847833655450630463, guid: b3415563ecaa9cb489758f3bfffdb369, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847833655450630463, guid: b3415563ecaa9cb489758f3bfffdb369, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847833655450630463, guid: b3415563ecaa9cb489758f3bfffdb369, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847833655450630463, guid: b3415563ecaa9cb489758f3bfffdb369, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847833655450630463, guid: b3415563ecaa9cb489758f3bfffdb369, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847833655450630463, guid: b3415563ecaa9cb489758f3bfffdb369, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847833655450630463, guid: b3415563ecaa9cb489758f3bfffdb369, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847833655450630463, guid: b3415563ecaa9cb489758f3bfffdb369, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847833655450630463, guid: b3415563ecaa9cb489758f3bfffdb369, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b3415563ecaa9cb489758f3bfffdb369, type: 3}
 --- !u!1 &700805305
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,7 +1095,7 @@ MonoBehaviour:
   player: {fileID: 1736237668}
   pushing: 1
   maxSpeed: 2
-  TickoutSpeed: 10
+  TickoutSpeed: 5
   stayingTime: 2
   stillTime: 0.5
   radius: 18
@@ -1091,7 +1148,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1028407716
 GameObject:
@@ -1160,7 +1217,7 @@ MonoBehaviour:
   player: {fileID: 1736237668}
   pushing: 1
   maxSpeed: 2
-  TickoutSpeed: 10
+  TickoutSpeed: 5
   stayingTime: 2
   stillTime: 0.5
   radius: 20
@@ -1439,7 +1496,7 @@ MonoBehaviour:
   player: {fileID: 1736237668}
   pushing: 1
   maxSpeed: 2
-  TickoutSpeed: 10
+  TickoutSpeed: 5
   stayingTime: 2
   stillTime: 0.5
   radius: 27.3
@@ -1601,7 +1658,7 @@ MonoBehaviour:
   player: {fileID: 1736237668}
   pushing: 1
   maxSpeed: 2
-  TickoutSpeed: 10
+  TickoutSpeed: 5
   stayingTime: 2
   stillTime: 0.5
   radius: 23
@@ -1948,7 +2005,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5660041957276326727, guid: e2c21459325e60840a5e28ebd315055b, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5660041957276326727, guid: e2c21459325e60840a5e28ebd315055b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2044,7 +2101,7 @@ MonoBehaviour:
   player: {fileID: 1736237668}
   pushing: 1
   maxSpeed: 2
-  TickoutSpeed: 10
+  TickoutSpeed: 5
   stayingTime: 2
   stillTime: 0.5
   radius: 25
@@ -2151,7 +2208,7 @@ MonoBehaviour:
   player: {fileID: 1736237668}
   pushing: 1
   maxSpeed: 2
-  TickoutSpeed: 10
+  TickoutSpeed: 1
   stayingTime: 2
   stillTime: 0.5
   radius: 26
@@ -2278,7 +2335,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2911283286907066598, guid: 3b28db45a67f0f24e8f8334b850eb088, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2911283286907066598, guid: 3b28db45a67f0f24e8f8334b850eb088, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2355,7 +2412,7 @@ PrefabInstance:
       objectReference: {fileID: 1736237668}
     - target: {fileID: 2359666845788087888, guid: 102534caef961fd429c3181932794443, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2359666845788087888, guid: 102534caef961fd429c3181932794443, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2428,7 +2485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8249895786848910157, guid: a496fdb906e258d4481761bcea380706, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8249895786848910157, guid: a496fdb906e258d4481761bcea380706, type: 3}
       propertyPath: m_LocalScale.x
