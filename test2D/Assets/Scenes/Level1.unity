@@ -1525,7 +1525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range1: 0
   range2: 100
-  maxSpeed: 13
+  maxSpeed: 20
   accel: 4
 --- !u!1 &8074152456153942438
 GameObject:
