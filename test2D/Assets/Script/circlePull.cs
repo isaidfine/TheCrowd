@@ -81,13 +81,13 @@ void OnDrawGizmos(){
                 }    
         }speed =Mathf.MoveTowards(speed,0.0f,speed/stillTime*Time.deltaTime);
         }
-        speed =Mathf.Clamp(speed,0.0f,maxSpeed);       
+        //speed =Mathf.Clamp(speed,0.0f,maxSpeed);       
         player.transform.position += speed*dir/dir.magnitude;
     }
         
     void IsEnter()
     {
-        if (dir.magnitude< radius) 
+        if (dir.magnitude<= radius) 
         {
             if(!IsIn)
             {

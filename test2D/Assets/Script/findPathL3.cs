@@ -1,11 +1,13 @@
 using UnityEngine;
 using System.Collections;
 
-public class findPath : MonoBehaviour {
+public class findPathL3 : MonoBehaviour {
 
-    public bool StartFollow = false;
+    //public bool StartFollow = false;
     public path PathToFollow;
     public int CurrentWayPointID = 0;
+    public Sprite redDot;
+    public Sprite redCircle;
     //public float Speed;
     public float reachDistance = 0f;
     public string PathName;
@@ -19,8 +21,7 @@ public class findPath : MonoBehaviour {
     }
 
     void Update () {
-        if (!StartFollow)
-            return;
+        //if (!StartFollow) return;
         if (ChangePath)
         {
             PathToFollow = GameObject.Find(PathName).GetComponent<path>();
@@ -38,8 +39,9 @@ public class findPath : MonoBehaviour {
         //transform.position = Vector3.MoveTowards(transform.position, PathToFollow.path_objs[CurrentWayPointID].position, Time.deltaTime * Speed);
         if (distance <= reachDistance)
         {          
-            PathToFollow.path_objs[CurrentWayPointID].gameObject.GetComponent<Renderer>().enabled=false;
+            PathToFollow.path_objs[CurrentWayPointID].gameObject.GetComponent<SpriteRenderer>().sprite=redDot;
             CurrentWayPointID++;
+            PathToFollow.path_objs[CurrentWayPointID].gameObject.GetComponent<SpriteRenderer>().enabled=true;
             Debug.Log("find"+CurrentWayPointID);
 
         }

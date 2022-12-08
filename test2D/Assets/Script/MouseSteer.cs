@@ -10,6 +10,10 @@ public class MouseSteer : MonoBehaviour
     [SerializeField] private float maxSpeed;
     [SerializeField] private float accel;
 
+    [Header("Border")]
+    public float Xmax;
+    public float Ymax;
+
     private Vector2 velocity;
 
     private Vector2 Position
@@ -18,6 +22,8 @@ public class MouseSteer : MonoBehaviour
         set
         {
             Vector3 pos = value;
+            pos.x = Mathf.Clamp(pos.x, -Xmax, Xmax);
+            pos.y = Mathf.Clamp(pos.y, -Ymax, Ymax);
             transform.position = pos;
         }
     }
@@ -53,6 +59,8 @@ public class MouseSteer : MonoBehaviour
         velocity += steering * Time.fixedDeltaTime * accel;
         Position += velocity * Time.fixedDeltaTime;
        }
+
+
     }
 
     private Vector2 GetMousePosition()
