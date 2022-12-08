@@ -1038,7 +1038,7 @@ MonoBehaviour:
   player: {fileID: 1736237668}
   pushing: 1
   maxSpeed: 2
-  TickoutSpeed: 10
+  TickoutSpeed: 5
   stayingTime: 2
   stillTime: 0.5
   radius: 18
@@ -1160,7 +1160,7 @@ MonoBehaviour:
   player: {fileID: 1736237668}
   pushing: 1
   maxSpeed: 2
-  TickoutSpeed: 10
+  TickoutSpeed: 5
   stayingTime: 2
   stillTime: 0.5
   radius: 20
@@ -1439,7 +1439,7 @@ MonoBehaviour:
   player: {fileID: 1736237668}
   pushing: 1
   maxSpeed: 2
-  TickoutSpeed: 10
+  TickoutSpeed: 5
   stayingTime: 2
   stillTime: 0.5
   radius: 27.3
@@ -1601,7 +1601,7 @@ MonoBehaviour:
   player: {fileID: 1736237668}
   pushing: 1
   maxSpeed: 2
-  TickoutSpeed: 10
+  TickoutSpeed: 5
   stayingTime: 2
   stillTime: 0.5
   radius: 23
@@ -2044,7 +2044,7 @@ MonoBehaviour:
   player: {fileID: 1736237668}
   pushing: 1
   maxSpeed: 2
-  TickoutSpeed: 10
+  TickoutSpeed: 5
   stayingTime: 2
   stillTime: 0.5
   radius: 25
@@ -2151,7 +2151,7 @@ MonoBehaviour:
   player: {fileID: 1736237668}
   pushing: 1
   maxSpeed: 2
-  TickoutSpeed: 10
+  TickoutSpeed: 1
   stayingTime: 2
   stillTime: 0.5
   radius: 26

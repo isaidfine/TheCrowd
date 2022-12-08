@@ -45,7 +45,7 @@ public class findPath : MonoBehaviour {
             Debug.Log("find"+CurrentWayPointID);
 
         }
-        if (CurrentWayPointID >= PathToFollow.path_objs.Count-1)
+        if (CurrentWayPointID >= PathToFollow.path_objs.Count)
         {
             Debug.Log("finished!");
             GetComponent<MouseSteer>().enabled = false;
