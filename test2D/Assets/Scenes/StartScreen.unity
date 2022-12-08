@@ -1778,7 +1778,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2114005860}
   m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -93.2, y: 0, z: 0}
+  m_LocalPosition: {x: -95, y: 18.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1800,6 +1800,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Top: {fileID: 1973387124}
   Bottom: {fileID: 36843101}
+  CursorAni: {fileID: 1144054164}
 --- !u!95 &2114005872
 Animator:
   serializedVersion: 4
@@ -1834,5 +1835,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 1484322122}
   instruction: {fileID: 1144054164}
-  endingPoint: {x: 95, y: 0, z: 0}
+  endingPoint: {x: 95, y: 0}
   speed: 10
