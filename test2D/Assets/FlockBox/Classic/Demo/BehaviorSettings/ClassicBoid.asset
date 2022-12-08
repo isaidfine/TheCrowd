@@ -65,7 +65,7 @@ MonoBehaviour:
   debugColor: {r: 1, g: 1, b: 1, a: 1}
   debugDrawSteering: 0
   debugDrawProperties: 0
-  foldout: 0
+  foldout: 1
   effectiveRadius: 10
   fieldOfView: 360
 --- !u!114 &11400000
@@ -107,6 +107,6 @@ MonoBehaviour:
   debugColor: {r: 1, g: 1, b: 1, a: 1}
   debugDrawSteering: 0
   debugDrawProperties: 0
-  foldout: 0
+  foldout: 1
   effectiveRadius: 10
   fieldOfView: 360

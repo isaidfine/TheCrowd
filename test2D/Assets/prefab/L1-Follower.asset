@@ -21,8 +21,26 @@ MonoBehaviour:
   debugDrawSteering: 0
   debugDrawProperties: 0
   foldout: 1
-  lookAheadSeconds: 5
---- !u!114 &-6742341320620086265
+  lookAheadSeconds: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b81d4f1c37cfb9b4696d982df08a7441, type: 3}
+  m_Name: L1-Follower
+  m_EditorClassIdentifier: 
+  maxForce: 40
+  maxSpeed: 30
+  containmentBehavior: {fileID: -7725174596085115582}
+  behaviors:
+  - {fileID: 8903089436331385456}
+  - {fileID: 466246063258879682}
+--- !u!114 &466246063258879682
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,25 +62,7 @@ MonoBehaviour:
   debugDrawProperties: 0
   foldout: 1
   effectiveRadius: 2
-  fieldOfView: 360
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b81d4f1c37cfb9b4696d982df08a7441, type: 3}
-  m_Name: L1-Follower
-  m_EditorClassIdentifier: 
-  maxForce: 40
-  maxSpeed: 30
-  containmentBehavior: {fileID: -7725174596085115582}
-  behaviors:
-  - {fileID: -6742341320620086265}
-  - {fileID: 8903089436331385456}
+  fieldOfView: 270
 --- !u!114 &8903089436331385456
 MonoBehaviour:
   m_ObjectHideFlags: 1

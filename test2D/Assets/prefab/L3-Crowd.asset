@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01ce6ca3de7d1874c99c35fb529e4e7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isActive: 1
+  isActive: 0
   weight: 0.5
   useTagFilter: 0
   filterTags: []
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 1
-  weight: 1
+  weight: 1.37
   useTagFilter: 0
   filterTags: []
   drawDebug: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
   debugDrawSteering: 0
   debugDrawProperties: 0
   foldout: 1
-  effectiveRadius: 5
+  effectiveRadius: 8
   fieldOfView: 360
 --- !u!114 &11400000
 MonoBehaviour:
@@ -82,12 +82,14 @@ MonoBehaviour:
   m_Name: L3-Crowd
   m_EditorClassIdentifier: 
   maxForce: 20
-  maxSpeed: 30
+  maxSpeed: 20
   containmentBehavior: {fileID: -7725174596085115582}
   behaviors:
   - {fileID: -6742341320620086265}
   - {fileID: 1000165284297202934}
   - {fileID: -8082398323417719452}
+  - {fileID: 8039527825935633888}
+  - {fileID: 2159046592450311450}
 --- !u!114 &1000165284297202934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -101,7 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 1
-  weight: 0.5
+  weight: 1
   useTagFilter: 0
   filterTags: []
   drawDebug: 0
@@ -111,3 +113,49 @@ MonoBehaviour:
   foldout: 1
   wanderScope: 90
   wanderIntensity: 1
+--- !u!114 &2159046592450311450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ea8df8741560c5419c65741a80da967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 1
+  weight: 0.73
+  useTagFilter: 0
+  filterTags: []
+  drawDebug: 0
+  debugColor: {r: 1, g: 1, b: 1, a: 1}
+  debugDrawSteering: 0
+  debugDrawProperties: 0
+  foldout: 1
+  effectiveRadius: 10
+  fieldOfView: 360
+--- !u!114 &8039527825935633888
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7172dbec51051c438e5cb95fbc2154c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 1
+  weight: 0.811
+  useTagFilter: 0
+  filterTags: []
+  drawDebug: 0
+  debugColor: {r: 1, g: 1, b: 1, a: 1}
+  debugDrawSteering: 0
+  debugDrawProperties: 0
+  foldout: 1
+  effectiveRadius: 10
+  fieldOfView: 360
