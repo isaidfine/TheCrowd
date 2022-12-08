@@ -6,6 +6,7 @@ public class CallEdges : MonoBehaviour
 {
     public Animator Top;
     public Animator Bottom;
+    public GameObject CursorAni;
     void Start()
     {
         
@@ -17,7 +18,9 @@ public class CallEdges : MonoBehaviour
         {
             Top.SetBool("TopAppear", true);
             Bottom.SetBool("BottomAppear", true);
-            Debug.Log("hit");
+            CursorAni.SetActive(false);
+
+            
         }
     }
 
