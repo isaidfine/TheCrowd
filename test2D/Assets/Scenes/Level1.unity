@@ -207,7 +207,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &45549686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,7 +357,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 07b080d33edf349489d68f8ccd906152, type: 3}
+  m_Sprite: {fileID: 21300000, guid: acd58a14ed1c5aa4592a0ebd2c4109b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -407,7 +407,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496163290}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -441,7 +441,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 07b080d33edf349489d68f8ccd906152, type: 3}
+  m_Sprite: {fileID: 21300000, guid: acd58a14ed1c5aa4592a0ebd2c4109b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -500,10 +500,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1991ccd5ad56b09418474661daf813bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartFollow: 1
   PathToFollow: {fileID: 1535908224}
   CurrentWayPointID: 0
-  Speed: 0
+  redDot: {fileID: 21300000, guid: 07b080d33edf349489d68f8ccd906152, type: 3}
+  redCircle: {fileID: 21300000, guid: acd58a14ed1c5aa4592a0ebd2c4109b5, type: 3}
   reachDistance: 5
   PathName: PlayerPath
 --- !u!114 &1092539643
@@ -520,22 +520,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endingPoint: {fileID: 1279842507}
   speed: 15
---- !u!111 &1092539649
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6570198727597776084}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 7400000, guid: c1ff8ae49148d20428128d0b4961dd7d, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &1117754534
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,7 +729,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1385211392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1096,7 +1080,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885056613}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -1130,7 +1114,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 07b080d33edf349489d68f8ccd906152, type: 3}
+  m_Sprite: {fileID: 21300000, guid: acd58a14ed1c5aa4592a0ebd2c4109b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1211,7 +1195,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1951428960}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -1245,7 +1229,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 07b080d33edf349489d68f8ccd906152, type: 3}
+  m_Sprite: {fileID: 21300000, guid: acd58a14ed1c5aa4592a0ebd2c4109b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1286,21 +1270,6 @@ Transform:
   m_Father: {fileID: 6570198727597776081}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &3204260007838082692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6570198727597776084}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c693ca9d95c639a4b9960fbc455e120e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movingSpeed: 30
-  Xmax: 90
-  Ymax: 35
 --- !u!212 &3730618736719859031
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1379,8 +1348,8 @@ Transform:
   m_GameObject: {fileID: 4070919508383201972}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.74, y: 1.53, z: 3}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1.9, y: 2.3, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2108401840773196777}
   m_RootOrder: 0
@@ -1470,11 +1439,10 @@ GameObject:
   - component: {fileID: 6570198727597776086}
   - component: {fileID: 6570198727597776085}
   - component: {fileID: 967741102781130212}
-  - component: {fileID: 3204260007838082692}
-  - component: {fileID: 1092539649}
   - component: {fileID: 1092539637}
   - component: {fileID: 1092539643}
   - component: {fileID: 6570198727597776087}
+  - component: {fileID: 6570198727597776088}
   m_Layer: 0
   m_Name: PlayerPulledByFollowers
   m_TagString: Untagged
@@ -1527,6 +1495,26 @@ MonoBehaviour:
   range2: 100
   maxSpeed: 20
   accel: 4
+  Xmax: 90
+  Ymax: 50
+--- !u!114 &6570198727597776088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6570198727597776084}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2689b109984897248844eb822605c2c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PathToFollow: {fileID: 1535908224}
+  CurrentWayPointID: 0
+  redDot: {fileID: 21300000, guid: 07b080d33edf349489d68f8ccd906152, type: 3}
+  redCircle: {fileID: 21300000, guid: acd58a14ed1c5aa4592a0ebd2c4109b5, type: 3}
+  reachDistance: 5
+  PathName: PlayerPath
 --- !u!1 &8074152456153942438
 GameObject:
   m_ObjectHideFlags: 0

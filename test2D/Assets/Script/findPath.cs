@@ -3,10 +3,12 @@ using System.Collections;
 
 public class findPath : MonoBehaviour {
 
-    public bool StartFollow = false;
+    //public bool StartFollow = false;
     public path PathToFollow;
     public int CurrentWayPointID = 0;
     //public float Speed;
+    public Sprite redDot;
+    public Sprite redCircle;
     public float reachDistance = 0f;
     public string PathName;
     private string LastName;
@@ -19,8 +21,7 @@ public class findPath : MonoBehaviour {
     }
 
     void Update () {
-        if (!StartFollow)
-            return;
+        //if (!StartFollow) return;
         if (ChangePath)
         {
             PathToFollow = GameObject.Find(PathName).GetComponent<path>();
@@ -38,12 +39,13 @@ public class findPath : MonoBehaviour {
         //transform.position = Vector3.MoveTowards(transform.position, PathToFollow.path_objs[CurrentWayPointID].position, Time.deltaTime * Speed);
         if (distance <= reachDistance)
         {          
-            PathToFollow.path_objs[CurrentWayPointID].gameObject.GetComponent<Renderer>().enabled=false;
+            PathToFollow.path_objs[CurrentWayPointID].gameObject.GetComponent<SpriteRenderer>().sprite=redDot;
             CurrentWayPointID++;
+            PathToFollow.path_objs[CurrentWayPointID].gameObject.GetComponent<SpriteRenderer>().enabled=true;
             Debug.Log("find"+CurrentWayPointID);
 
         }
-        if (CurrentWayPointID >= PathToFollow.path_objs.Count)
+        if (CurrentWayPointID >= PathToFollow.path_objs.Count-1)
         {
             Debug.Log("finished!");
             GetComponent<MouseSteer>().enabled = false;
