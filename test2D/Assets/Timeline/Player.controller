@@ -35,7 +35,7 @@ AnimatorState:
   m_PrefabAsset: {fileID: 0}
   m_Name: PlayerEnter
   m_Speed: 1
-  m_CycleOffset: 0
+  m_CycleOffset: 1
   m_Transitions: []
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
@@ -49,7 +49,7 @@ AnimatorState:
   m_Motion: {fileID: 7400000, guid: 4fe8071c9472f584d81fa890beb11ce6, type: 2}
   m_Tag: 
   m_SpeedParameter: 
-  m_MirrorParameter: 
+  m_MirrorParameter: played
   m_CycleOffsetParameter: 
   m_TimeParameter: 
 --- !u!1107 &-6960168874967053928
@@ -63,7 +63,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -8875670545079144625}
-    m_Position: {x: 110, y: 150, z: 0}
+    m_Position: {x: 110, y: 160, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7882588653308564746}
     m_Position: {x: 390, y: 130, z: 0}
@@ -72,7 +72,7 @@ AnimatorStateMachine:
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 700, y: 90, z: 0}
+  m_AnyStatePosition: {x: 300, y: 60, z: 0}
   m_EntryPosition: {x: 60, y: 60, z: 0}
   m_ExitPosition: {x: 730, y: 210, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
@@ -85,7 +85,13 @@ AnimatorController:
   m_PrefabAsset: {fileID: 0}
   m_Name: Player
   serializedVersion: 5
-  m_AnimatorParameters: []
+  m_AnimatorParameters:
+  - m_Name: played
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
