@@ -45,10 +45,8 @@ public class endAni : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D line)
     {
-        
-        if (line.gameObject.name == "endingLine")
+        if (line.gameObject.tag == "range")
         {
-            Debug.Log("ReachingLIne");
             gameObject.GetComponent<MouseSteer>().enabled= false;
             transform.position = Vector3.MoveTowards(transform.position, endingPoint, speed * Time.deltaTime);
 

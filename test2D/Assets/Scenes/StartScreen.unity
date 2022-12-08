@@ -1414,7 +1414,7 @@ GameObject:
   - component: {fileID: 1938933345}
   m_Layer: 0
   m_Name: 'endingLine '
-  m_TagString: Untagged
+  m_TagString: range
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1452,7 +1452,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938933344}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -1731,7 +1731,7 @@ MonoBehaviour:
   range2: 100
   maxSpeed: 70
   accel: 50
-  Xmax: 90
+  Xmax: 100
   Ymax: 50
 --- !u!58 &2114005866
 CircleCollider2D:
@@ -1833,6 +1833,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1484322122}
-  instruction: {fileID: 231945424}
-  endingPoint: {x: 91, y: 0, z: 0}
-  speed: 1
+  instruction: {fileID: 1144054164}
+  endingPoint: {x: 95, y: 0, z: 0}
+  speed: 10

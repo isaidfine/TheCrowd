@@ -24,6 +24,7 @@ public class MouseSteer : MonoBehaviour
             Vector3 pos = value;
             pos.x = Mathf.Clamp(pos.x, -Xmax, Xmax);
             pos.y = Mathf.Clamp(pos.y, -Ymax, Ymax);
+            pos.z=0;
             transform.position = pos;
         }
     }
@@ -44,6 +45,8 @@ public class MouseSteer : MonoBehaviour
         }
 
         var target = GetMousePosition();
+        //target  = Camera.main.ScreenToWorldPoint(target);
+        
         transform.LookAt(target,Vector3.back);
         var targetOffset = target - Position;
         float distance = targetOffset.magnitude;
