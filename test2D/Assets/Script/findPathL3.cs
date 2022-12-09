@@ -52,7 +52,7 @@ public class findPathL3 : MonoBehaviour {
         if (CurrentWayPointID >= PathToFollow.path_objs.Count-1)
         {
             Debug.Log("finished!");
-            if (Vector3.Distance(transform.position,empty.gameObject.transform.position)<= 20.0f)
+            if (Vector3.Distance(transform.position,empty.gameObject.transform.position)<= 90.0f)
             {
                 //GetComponent<MouseSteer>().enabled = false;
                 change.SetActive(true);
