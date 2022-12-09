@@ -7,6 +7,8 @@ TagManager:
   - range
   - Leader
   - follower
+  - Obstacle
+  - Sound
   layers:
   - Default
   - TransparentFX

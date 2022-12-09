@@ -7,6 +7,7 @@ public class CallEdges : MonoBehaviour
     public Animator Top;
     public Animator Bottom;
     public GameObject CursorAni;
+    public GameObject Bgm;
     void Start()
     {
         
@@ -19,6 +20,7 @@ public class CallEdges : MonoBehaviour
             Top.SetBool("TopAppear", true);
             Bottom.SetBool("BottomAppear", true);
             CursorAni.SetActive(false);
+            Bgm.GetComponent<AudioSource>().UnPause();
 
             
         }
