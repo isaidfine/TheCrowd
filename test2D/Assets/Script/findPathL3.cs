@@ -74,11 +74,11 @@ public class findPathL3 : MonoBehaviour {
 
     IEnumerator EndingAudio()
     {
-        yield return new WaitForSeconds(10);
-        endingMusic.GetComponent<AudioSource>().Play();
         startMusic.GetComponent<AudioSource>().Pause();
-        Sprite.SetActive(false);
         obs.SetActive(false);
+        yield return new WaitForSeconds(10);
+        endingMusic.SetActive(true);
+        Sprite.SetActive(false);
         yield return new WaitForSeconds(12);
         GetComponent<startenter>().IsEnd = true;
 
