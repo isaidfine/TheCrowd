@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b81d4f1c37cfb9b4696d982df08a7441, type: 3}
-  m_Name: L3-Crowd
+  m_Name: L3-Crowd 7
   m_EditorClassIdentifier: 
   maxForce: 20
   maxSpeed: 20
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 991e65c331b0e6748af0d23822cd3eb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isActive: 1
+  isActive: 0
   weight: 5
   useTagFilter: 0
   filterTags:

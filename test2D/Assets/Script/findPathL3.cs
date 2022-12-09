@@ -11,6 +11,10 @@ public class findPathL3 : MonoBehaviour {
     //public float Speed;
     public float reachDistance = 0f;
     public string PathName;
+    public GameObject empty;
+    public GameObject change;
+
+     
     private string LastName;
     private bool ChangePath = true;
 
@@ -45,15 +49,15 @@ public class findPathL3 : MonoBehaviour {
             Debug.Log("find"+CurrentWayPointID);
 
         }
-        if (CurrentWayPointID >= PathToFollow.path_objs.Count)
+        if (CurrentWayPointID >= PathToFollow.path_objs.Count-1)
         {
             Debug.Log("finished!");
-            GetComponent<MouseSteer>().enabled = false;
-            GetComponent<PullingPlayer>().enabled = false;
-            GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
-            GetComponent<SphereCollider>().enabled=false;
-            //transform.GetChild(0).GetComponent<Animation>().enabled = true;
-            GetComponent<cutScene1>().enabled = true;
+            if (Vector3.Distance(transform.position,empty.gameObject.transform.position)<= 20.0f)
+            {
+                //GetComponent<MouseSteer>().enabled = false;
+                change.SetActive(true);
+            }
+            
 
         }
     }

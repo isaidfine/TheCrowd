@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class startenter : MonoBehaviour
 {
     public GameObject StartPoint;
@@ -30,6 +31,7 @@ public class startenter : MonoBehaviour
     {
         if (IsEnter)
         {
+            GetComponent<MouseSteer>().enabled= false;
             this.transform.position= Vector3.MoveTowards(transform.position, startPoint, movingSpeed*Time.deltaTime);
             if(Vector3.Distance(transform.position, startPoint)==0)
             {

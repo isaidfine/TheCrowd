@@ -69,6 +69,29 @@ MonoBehaviour:
   foldout: 1
   effectiveRadius: 8
   fieldOfView: 360
+--- !u!114 &-4042470310035357403
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 991e65c331b0e6748af0d23822cd3eb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 0
+  weight: 5
+  useTagFilter: 0
+  filterTags: []
+  drawDebug: 0
+  debugColor: {r: 1, g: 1, b: 1, a: 1}
+  debugDrawSteering: 0
+  debugDrawProperties: 0
+  foldout: 1
+  lookAheadSeconds: 1
+  clearance: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,10 +102,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b81d4f1c37cfb9b4696d982df08a7441, type: 3}
-  m_Name: L3-Crowd
+  m_Name: L3-Crowd 5
   m_EditorClassIdentifier: 
   maxForce: 20
-  maxSpeed: 20
+  maxSpeed: 40
   containmentBehavior: {fileID: -7725174596085115582}
   behaviors:
   - {fileID: -6742341320620086265}
@@ -90,7 +113,7 @@ MonoBehaviour:
   - {fileID: -8082398323417719452}
   - {fileID: 8039527825935633888}
   - {fileID: 2159046592450311450}
-  - {fileID: 2982156738976779873}
+  - {fileID: -4042470310035357403}
 --- !u!114 &1000165284297202934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -137,30 +160,6 @@ MonoBehaviour:
   foldout: 1
   effectiveRadius: 10
   fieldOfView: 360
---- !u!114 &2982156738976779873
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 991e65c331b0e6748af0d23822cd3eb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isActive: 1
-  weight: 5
-  useTagFilter: 0
-  filterTags:
-  - Player
-  drawDebug: 0
-  debugColor: {r: 1, g: 1, b: 1, a: 1}
-  debugDrawSteering: 0
-  debugDrawProperties: 0
-  foldout: 1
-  lookAheadSeconds: 1
-  clearance: 0
 --- !u!114 &8039527825935633888
 MonoBehaviour:
   m_ObjectHideFlags: 1
