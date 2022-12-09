@@ -2957,6 +2957,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5660041957292425079, guid: e2c21459325e60840a5e28ebd315055b, type: 3}
+      propertyPath: m_Depth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5660041957609787646, guid: e2c21459325e60840a5e28ebd315055b, type: 3}
+      propertyPath: orthographic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2c21459325e60840a5e28ebd315055b, type: 3}
 --- !u!1 &1912069422
