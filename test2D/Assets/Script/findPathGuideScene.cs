@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class findPath : MonoBehaviour {
+public class findPathGuideScene : MonoBehaviour {
 
     //public bool StartFollow = false;
     public path PathToFollow;
@@ -11,7 +11,7 @@ public class findPath : MonoBehaviour {
     public Sprite redCircle;
     public float reachDistance = 0f;
     public string PathName;
-    public GameObject EndScript;
+    public GameObject thiss;
 
 
     private string LastName;
@@ -45,18 +45,16 @@ public class findPath : MonoBehaviour {
             PathToFollow.path_objs[CurrentWayPointID].gameObject.GetComponent<SpriteRenderer>().sprite=redDot;
             CurrentWayPointID++;
             PathToFollow.path_objs[CurrentWayPointID].gameObject.GetComponent<SpriteRenderer>().enabled=true;
-            Debug.Log("find"+CurrentWayPointID);
+            //Debug.Log("find"+CurrentWayPointID);
 
         }
-        if (CurrentWayPointID >= PathToFollow.path_objs.Count)
+        if (CurrentWayPointID >= PathToFollow.path_objs.Count-1)
         {
             Debug.Log("finished!");
             GetComponent<MouseSteer>().enabled = false;
-            GetComponent<PullingPlayer>().enabled = false;
-            GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
-            GetComponent<SphereCollider>().enabled=false;
-            //transform.GetChild(0).GetComponent<Animation>().enabled = true;
-            GetComponent<cutScene1>().enabled = true;
+            //GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
+            GetComponent<startenter>().IsEnd = true;
+            Debug.Log("end");
 
         }
     }
