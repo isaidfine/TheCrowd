@@ -521,7 +521,7 @@ GameObject:
   - component: {fileID: 509882078}
   - component: {fileID: 509882079}
   m_Layer: 0
-  m_Name: CrowdBox (1)
+  m_Name: CrowdBox5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -580,7 +580,7 @@ GameObject:
   - component: {fileID: 523531731}
   - component: {fileID: 523531732}
   m_Layer: 0
-  m_Name: CrowdBox (2)
+  m_Name: CrowdBox6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1333,7 +1333,7 @@ GameObject:
   - component: {fileID: 1392353900}
   - component: {fileID: 1392353901}
   m_Layer: 0
-  m_Name: CrowdBox (3)
+  m_Name: CrowdBox 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1698,7 +1698,7 @@ GameObject:
   - component: {fileID: 1820629930}
   - component: {fileID: 1820629931}
   m_Layer: 0
-  m_Name: CrowdBox
+  m_Name: CrowdBox4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

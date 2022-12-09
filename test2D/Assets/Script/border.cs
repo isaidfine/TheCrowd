@@ -22,7 +22,7 @@ public class border : MonoBehaviour
         if(other.gameObject.tag =="Player")
         {
             other.transform.position = startPoint.transform.position;
-            other.GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
+            other.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
 
         }
     }
