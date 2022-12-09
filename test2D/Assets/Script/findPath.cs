@@ -58,7 +58,7 @@ public class findPath : MonoBehaviour {
             GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
             GetComponent<SphereCollider>().enabled=false;
             //transform.GetChild(0).GetComponent<Animation>().enabled = true;
-            GetComponent<cutScene1>().enabled = true;
+            GetComponent<startenter>().IsEnd = true;
 
         }
     }

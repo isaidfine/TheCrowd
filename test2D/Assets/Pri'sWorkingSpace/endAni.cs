@@ -10,7 +10,7 @@ public class endAni : MonoBehaviour
     [Header("Ending Scene")]
     public  Vector3 endingPoint;
     public float speed;
-    public GameObject LevelLoader;
+    public GameObject Loader;
 
     private bool IsEnd;
 
@@ -29,7 +29,7 @@ public class endAni : MonoBehaviour
             this.transform.position= Vector3.MoveTowards(transform.position, endingPoint, speed*Time.deltaTime);
             if(Vector3.Distance(transform.position, endingPoint)==0)
             {
-                LevelLoader.SetActive(true);
+                Loader.GetComponent<LevelLoader>().LoadNextLevel();
             }
 
         }
