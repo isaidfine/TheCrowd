@@ -10,13 +10,11 @@ public class LevelLoader : MonoBehaviour
     public float transitionTime = 1f;
 
     // Update is called once per frame
-    void Update()
+    void Awake()
     {
         //for test purpose, press Esc to load next nevel
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
             LoadNextLevel();
-        }
+
     }
 
     public void LoadNextLevel()

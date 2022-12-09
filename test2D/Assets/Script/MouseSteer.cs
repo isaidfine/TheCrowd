@@ -69,7 +69,7 @@ public class MouseSteer : MonoBehaviour
     private Vector2 GetMousePosition()
     {
         Vector3 mousePos = Input.mousePosition;
-        mousePos.z = 10;
+        mousePos.z = 0;
         mousePos = Camera.main.ScreenToWorldPoint(mousePos);
         return mousePos;
     }
