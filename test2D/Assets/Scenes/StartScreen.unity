@@ -1541,7 +1541,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4847833655450630460, guid: b3415563ecaa9cb489758f3bfffdb369, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4847833655450630463, guid: b3415563ecaa9cb489758f3bfffdb369, type: 3}
       propertyPath: m_RootOrder
@@ -2129,7 +2129,7 @@ MonoBehaviour:
   instruction: {fileID: 1144054164}
   endingPoint: {x: 90, y: 0, z: 0}
   speed: 5
-  LevelLoader: {fileID: 153069079}
+  Loader: {fileID: 153069079}
 --- !u!1001 &7965583170972727794
 PrefabInstance:
   m_ObjectHideFlags: 0

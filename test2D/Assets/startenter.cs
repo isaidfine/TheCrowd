@@ -51,7 +51,7 @@ public class startenter : MonoBehaviour
             transform.rotation = rotation;
             if(Vector3.Distance(transform.position, endingPoint)==0)
             {
-                LevelLoader.SetActive(true);
+                LevelLoader.GetComponent<LevelLoader>().LoadNextLevel();
             }
 
         }
