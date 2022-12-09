@@ -32,6 +32,8 @@ public class startenter : MonoBehaviour
         if (IsEnter)
         {
             GetComponent<MouseSteer>().enabled= false;
+            Quaternion rotation = Quaternion.LookRotation(Vector3.right, Vector3.back);
+            transform.rotation = rotation;
             this.transform.position= Vector3.MoveTowards(transform.position, startPoint, movingSpeed*Time.deltaTime);
             if(Vector3.Distance(transform.position, startPoint)==0)
             {
@@ -45,6 +47,8 @@ public class startenter : MonoBehaviour
         {
             this.transform.position= Vector3.MoveTowards(transform.position, endingPoint, movingSpeed*Time.deltaTime);
             GetComponent<MouseSteer>().enabled= false;
+            Quaternion rotation = Quaternion.LookRotation(Vector3.right, Vector3.back);
+            transform.rotation = rotation;
             if(Vector3.Distance(transform.position, endingPoint)==0)
             {
                 LevelLoader.SetActive(true);
