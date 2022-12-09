@@ -11,10 +11,16 @@ public class findPathL3 : MonoBehaviour {
     //public float Speed;
     public float reachDistance = 0f;
     public string PathName;
+    public GameObject Sprite;
+    [Header("changeBox")]
     public GameObject empty;
     public GameObject change;
+    public GameObject endingMusic;
+    public GameObject startMusic;
+    
+    public GameObject LevelLoader;
 
-     
+
     private string LastName;
     private bool ChangePath = true;
 
@@ -57,8 +63,23 @@ public class findPathL3 : MonoBehaviour {
                 //GetComponent<MouseSteer>().enabled = false;
                 change.SetActive(true);
             }
+            empty.SetActive(true);
+            Sprite.SetActive(true);
+            StartCoroutine(EndingAudio());
             
 
         }
+    }
+
+
+    IEnumerator EndingAudio()
+    {
+        yield return new WaitForSeconds(10);
+        endingMusic.GetComponent<AudioSource>().Play();
+        startMusic.GetComponent<AudioSource>().Pause();
+        yield return new WaitForSeconds(12);
+        LevelLoader.SetActive(true);
+
+
     }
 }
