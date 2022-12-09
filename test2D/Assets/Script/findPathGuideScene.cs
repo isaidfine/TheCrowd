@@ -21,6 +21,7 @@ public class findPathGuideScene : MonoBehaviour {
 
 
     void Start () {
+                    
 
     }
 
@@ -54,9 +55,14 @@ public class findPathGuideScene : MonoBehaviour {
         {
             Debug.Log("finished!");
             GetComponent<MouseSteer>().enabled = false;
+
+           
             //GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
             GetComponent<startenter>().IsEnd = true;
+
             Debug.Log("end");
+
+            
 
         }
     }

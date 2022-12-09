@@ -11,7 +11,7 @@ public class startenter : MonoBehaviour
     public GameObject LevelLoader;
 
 
-    public bool IsEnd=false;
+    public bool IsEnd;
     public bool IsEnter;
     // Start is called before the first frame update
 
