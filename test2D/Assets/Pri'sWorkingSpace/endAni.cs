@@ -8,8 +8,11 @@ public class endAni : MonoBehaviour
     public GameObject button;
     public GameObject instruction;
     [Header("Ending Scene")]
-    public  Vector2 endingPoint;
+    public  Vector3 endingPoint;
     public float speed;
+    public GameObject LevelLoader;
+
+    private bool IsEnd;
 
 
     
@@ -21,11 +24,14 @@ public class endAni : MonoBehaviour
     }
     void Update()
     {
-
-         if(Vector3.Distance(transform.position, endingPoint)==0)
+        if (IsEnd)
         {
-            Debug.Log("LoadScene!");
-            SceneManager.LoadScene(1);
+            this.transform.position= Vector3.MoveTowards(transform.position, endingPoint, speed*Time.deltaTime);
+            if(Vector3.Distance(transform.position, endingPoint)==0)
+            {
+                LevelLoader.SetActive(true);
+            }
+
         }
 
     }
@@ -44,7 +50,7 @@ public class endAni : MonoBehaviour
         if (line.gameObject.tag == "range")
         {
             gameObject.GetComponent<MouseSteer>().enabled= false;
-            transform.position= Vector3.MoveTowards(transform.position, endingPoint, speed*Time.deltaTime);
+            IsEnd = true;
 
         }
     }
