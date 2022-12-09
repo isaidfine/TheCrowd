@@ -15,7 +15,9 @@ public class findPathL3 : MonoBehaviour {
     [Header("changeBox")]
     public GameObject empty;
     public GameObject change;
-    public AudioSource endingMusic;
+    public GameObject endingMusic;
+    public GameObject startMusic;
+    
     public GameObject LevelLoader;
 
 
@@ -73,7 +75,8 @@ public class findPathL3 : MonoBehaviour {
     IEnumerator EndingAudio()
     {
         yield return new WaitForSeconds(10);
-        endingMusic.Play();
+        endingMusic.GetComponent<AudioSource>().Play();
+        startMusic.GetComponent<AudioSource>().Pause();
         yield return new WaitForSeconds(12);
         LevelLoader.SetActive(true);
 
