@@ -1117,13 +1117,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 826381001}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 475.2106, y: 12.9635315, z: 0.34134352}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 98.5, y: -7.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_Father: {fileID: 2096040433388511919}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &877317015
 GameObject:
@@ -1617,7 +1617,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597304460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 77.8, y: 0, z: 0}
+  m_LocalPosition: {x: 700, y: -0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1868,6 +1868,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1767652429 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4847833655450630460, guid: b3415563ecaa9cb489758f3bfffdb369, type: 3}
+  m_PrefabInstance: {fileID: 2006000297}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1806526700
 GameObject:
   m_ObjectHideFlags: 0
@@ -2002,7 +2007,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1828803906
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2014,7 +2019,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e89659c372ffc4f4ab0a1a5ae8fe8678, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2106,13 +2111,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828803905}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.78604, y: 15.805937, z: -0.015743017}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 98.5, y: -7.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_Father: {fileID: 2096040433388511919}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2006000297
 PrefabInstance:
@@ -2613,6 +2618,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2096040433452157673}
+  - {fileID: 1828803907}
+  - {fileID: 826381003}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2639,6 +2646,7 @@ MonoBehaviour:
   change: {fileID: 1360664944}
   endingMusic: {fileID: 1828803905}
   startMusic: {fileID: 826381001}
+  obs: {fileID: 2052070351}
   Loader: {fileID: 0}
 --- !u!58 &2096040433388511921
 CircleCollider2D:
@@ -2692,7 +2700,7 @@ MonoBehaviour:
   StartPoint: {fileID: 765330126}
   EndingPoint: {fileID: 1597304460}
   movingSpeed: 5
-  LevelLoader: {fileID: 0}
+  LevelLoader: {fileID: 1767652429}
   IsEnd: 0
   IsEnter: 1
 --- !u!1 &2096040433452157672

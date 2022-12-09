@@ -19,6 +19,12 @@ public class findPathL1 : MonoBehaviour {
 
 
     void Start () {
+         if(GameObject.Find("Bgm"))
+            {
+                GameObject bgm =GameObject.Find("Bgm");
+                Destroy(bgm);
+                Debug.Log("Yes");
+            }
 
     }
 

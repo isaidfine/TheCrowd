@@ -17,6 +17,7 @@ public class findPathL3 : MonoBehaviour {
     public GameObject change;
     public GameObject endingMusic;
     public GameObject startMusic;
+    public GameObject obs;
     
     public GameObject Loader;
 
@@ -64,7 +65,6 @@ public class findPathL3 : MonoBehaviour {
                 change.SetActive(true);
             }
             empty.SetActive(true);
-            Sprite.SetActive(false);
             StartCoroutine(EndingAudio());
             
 
@@ -74,11 +74,13 @@ public class findPathL3 : MonoBehaviour {
 
     IEnumerator EndingAudio()
     {
-        yield return new WaitForSeconds(10);
-        endingMusic.GetComponent<AudioSource>().Play();
         startMusic.GetComponent<AudioSource>().Pause();
+        obs.SetActive(false);
+        yield return new WaitForSeconds(10);
+        endingMusic.SetActive(true);
+        Sprite.SetActive(false);
         yield return new WaitForSeconds(12);
-        Loader.SetActive(true);
+        GetComponent<startenter>().IsEnd = true;
 
 
     }

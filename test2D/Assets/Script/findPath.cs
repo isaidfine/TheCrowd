@@ -50,13 +50,13 @@ public class findPath : MonoBehaviour {
             Debug.Log("find"+CurrentWayPointID);
 
         }
-        if (CurrentWayPointID >= PathToFollow.path_objs.Count)
+        if (CurrentWayPointID >= PathToFollow.path_objs.Count-1)
         {
             Debug.Log("finished!");
             GetComponent<MouseSteer>().enabled = false;
-            GetComponent<PullingPlayer>().enabled = false;
-            GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
-            GetComponent<SphereCollider>().enabled=false;
+            //GetComponent<PullingPlayer>().enabled = false;
+            //GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
+            //GetComponent<SphereCollider>().enabled=false;
             //transform.GetChild(0).GetComponent<Animation>().enabled = true;
             GetComponent<startenter>().IsEnd = true;
 
