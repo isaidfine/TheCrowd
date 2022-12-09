@@ -129,6 +129,7 @@ MonoBehaviour:
   reachDistance: 5
   PathName: path
   thiss: {fileID: 7088045719947944667}
+  CircleSFX: {fileID: 0}
 --- !u!1 &7088045720011688607
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +203,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 53f7652fdca83584091fd11275953527, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 724af17df064b5e439a5f1ee1db786d6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

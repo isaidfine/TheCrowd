@@ -9,13 +9,7 @@ public class LevelLoader : MonoBehaviour
 
     public float transitionTime = 1f;
 
-    // Update is called once per frame
-    void Awake()
-    {
-        //for test purpose, press Esc to load next nevel
-            LoadNextLevel();
-
-    }
+ 
 
     public void LoadNextLevel()
     {
