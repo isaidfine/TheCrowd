@@ -13,6 +13,7 @@ public class findPath : MonoBehaviour {
     public string PathName;
     public GameObject EndScript;
     public AudioSource CircleSFX;
+    public GameObject eatingAudio;
 
 
     private string LastName;
@@ -41,9 +42,11 @@ public class findPath : MonoBehaviour {
         float distance = Vector3.Distance(PathToFollow.path_objs[CurrentWayPointID].position, transform.position);
         //transform.Translate(PathToFollow.path_objs[CurrentWayPointID].position * Time.deltaTime * Speed, Space.Self);
         //transform.position = Vector3.MoveTowards(transform.position, PathToFollow.path_objs[CurrentWayPointID].position, Time.deltaTime * Speed);
+        if (distance<= 20) CircleSFX.Play();
         if (distance <= reachDistance)
         {
-            CircleSFX.Play();
+            
+            eatingAudio.GetComponent<AudioSource>().Play();
             PathToFollow.path_objs[CurrentWayPointID].gameObject.GetComponent<SpriteRenderer>().sprite=redDot;
             CurrentWayPointID++;
             PathToFollow.path_objs[CurrentWayPointID].gameObject.GetComponent<SpriteRenderer>().enabled=true;
