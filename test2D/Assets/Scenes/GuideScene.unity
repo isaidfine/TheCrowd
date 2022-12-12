@@ -211,7 +211,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579782238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 100.2, y: -8.9, z: 0}
+  m_LocalPosition: {x: 98.9, y: -8.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -935,6 +935,10 @@ PrefabInstance:
       propertyPath: LevelLoader
       value: 
       objectReference: {fileID: 1163654161}
+    - target: {fileID: 7088045719947944665, guid: 6fdeaf6e93df3b0438f85a07b8c38679, type: 3}
+      propertyPath: movingSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7088045719947944667, guid: 6fdeaf6e93df3b0438f85a07b8c38679, type: 3}
       propertyPath: m_Name
       value: SimplePlayer
