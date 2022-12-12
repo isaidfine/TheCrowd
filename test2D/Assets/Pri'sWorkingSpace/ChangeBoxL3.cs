@@ -35,13 +35,13 @@ IEnumerator change;
     {
         old1.SetActive(false);
         new1.SetActive(true);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(1f);
         old2.SetActive(false);
         new2.SetActive(true);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(1f);
         old3.SetActive(false);
         new3.SetActive(true);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(1f);
         old4.SetActive(false);
         new4.SetActive(true);
         yield return null;

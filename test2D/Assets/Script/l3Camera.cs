@@ -18,6 +18,7 @@ public class l3Camera : MonoBehaviour
 
     [Header("Sphere")]
     public GameObject sphere;
+    public GameObject startMusic;
 
 
     private float CamX;
@@ -26,6 +27,8 @@ public class l3Camera : MonoBehaviour
     private int i;
     private Vector3 x1;
     private Vector3 x2;
+    private float l1;
+    private float l2;
     private float length;
 
     // Start is called before the first frame update
@@ -44,17 +47,15 @@ public class l3Camera : MonoBehaviour
     {
         playerPos = player.gameObject.transform.position;
         CamX= player.gameObject.transform.position.x>startFollowingX ? player. gameObject.transform.position.x:startFollowingX;
-        float pos= Mathf.MoveTowards(transform.position.x,CamX,movingspeed*Time.deltaTime);
-        transform.position = new Vector3(pos,0,-10);
-        box.transform.position= new Vector3(pos,0,0);
-        newBox.transform.position= new Vector3(pos,0,0);
+         x1 = pathPoints[i].position;
+        x2 = pathPoints[i+1].position;
+        l1=Vector3.Distance(playerPos, x1);
+        l2=Vector3.Distance(playerPos, x2);
+
         
         if (i<pathPoints.Count)
         {
-            x1 = pathPoints[i].position;
-            x2 = pathPoints[i+1].position;
-            float l1=Vector3.Distance(playerPos, x1);
-            float l2=Vector3.Distance(playerPos, x2);
+           
             colorDepth = (l1<l2 ? l1:l2)/100.0f;
             colorDepth = Mathf.Clamp(1-colorDepth,0.1f,1.0f);
 
@@ -63,25 +64,29 @@ public class l3Camera : MonoBehaviour
              pathPoints[i].GetComponent<SpriteRenderer>().enabled= false;
              i++;
             }
+            Debug.Log(i);
+
         }
-        else if (i>= pathPoints.Count)
+        if (i>= pathPoints.Count-2 )
         {
-            x1 = pathPoints[i].position;
-            float l1=Vector3.Distance(playerPos, x1);
+
+            if (l1>100.0f)
+            {
+                CamX += 70.0f;
+                startMusic.GetComponent<AudioSource>().Pause();
+                sphere.SetActive(false);
+                GetComponent<Camera>().orthographicSize= Mathf.MoveTowards(GetComponent<Camera>().orthographicSize,60f,2.0f*Time.deltaTime);
+
+            }
             colorDepth = l1/100.0f;
-            sphere.SetActive(false);
+            
+            Debug.Log(CamX);
         }
-         
-        //for(int i = 0;i<pathPoints.Count;i++){
-            //float x1 = pathPoints[i].position.x;
-            //float x2 = pathPoints[i+1].position.x;
-            //if(x1<pos & x2>pos )
-           // {
-             //  colorDepth =(x2-pos)/(x2-x1);
-              // break;
-           // }
-       // }
-       //Debug.Log(colorDepth);
+
+        float pos= Mathf.MoveTowards(transform.position.x,CamX,movingspeed*Time.deltaTime);
+        transform.position = new Vector3(pos,0,-10);
+        box.transform.position= new Vector3(pos,0,0);
+        newBox.transform.position= new Vector3(pos,0,0);
         Sprite.GetComponent<SpriteRenderer>().color=new Color (colorDepth,colorDepth,colorDepth,1.0f);
         sphere.transform.position = playerPos;
         

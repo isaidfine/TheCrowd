@@ -63,9 +63,10 @@ public class findPathL3 : MonoBehaviour {
             {
                 //GetComponent<MouseSteer>().enabled = false;
                 change.SetActive(true);
+                StartCoroutine(EndingAudio());
             }
             empty.SetActive(true);
-            StartCoroutine(EndingAudio());
+            
             
 
         }
@@ -74,7 +75,7 @@ public class findPathL3 : MonoBehaviour {
 
     IEnumerator EndingAudio()
     {
-        startMusic.GetComponent<AudioSource>().Pause();
+        
         obs.SetActive(false);
         yield return new WaitForSeconds(10);
         endingMusic.SetActive(true);
