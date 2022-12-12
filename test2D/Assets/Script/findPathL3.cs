@@ -16,7 +16,7 @@ public class findPathL3 : MonoBehaviour {
     public GameObject empty;
     public GameObject change;
     public GameObject endingMusic;
-    public GameObject startMusic;
+    public GameObject step;
     public GameObject obs;
     
     public GameObject Loader;
@@ -51,6 +51,7 @@ public class findPathL3 : MonoBehaviour {
         if (distance <= reachDistance)
         {          
             PathToFollow.path_objs[CurrentWayPointID].gameObject.GetComponent<SpriteRenderer>().sprite=redDot;
+            step.GetComponent<AudioSource>().Play();
             CurrentWayPointID++;
             PathToFollow.path_objs[CurrentWayPointID].gameObject.GetComponent<SpriteRenderer>().enabled=true;
             Debug.Log("find"+CurrentWayPointID);

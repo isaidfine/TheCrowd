@@ -16,7 +16,7 @@ public class l3Camera : MonoBehaviour
     Transform[] theArray;
     public GameObject Sprite;
 
-    [Header("Sphere")]
+    [Header("Sphere&Music")]
     public GameObject sphere;
     public GameObject startMusic;
 
@@ -53,11 +53,11 @@ public class l3Camera : MonoBehaviour
         l2=Vector3.Distance(playerPos, x2);
 
         
-        if (i<pathPoints.Count)
+        if (i<pathPoints.Count-2)
         {
            
             colorDepth = (l1<l2 ? l1:l2)/100.0f;
-            colorDepth = Mathf.Clamp(1-colorDepth,0.1f,1.0f);
+            
 
             if(l1>l2) 
              {
@@ -67,7 +67,7 @@ public class l3Camera : MonoBehaviour
             Debug.Log(i);
 
         }
-        if (i>= pathPoints.Count-2 )
+        else if (i>= pathPoints.Count-2 )
         {
 
             if (l1>100.0f)
@@ -78,10 +78,10 @@ public class l3Camera : MonoBehaviour
                 GetComponent<Camera>().orthographicSize= Mathf.MoveTowards(GetComponent<Camera>().orthographicSize,60f,2.0f*Time.deltaTime);
 
             }
-            colorDepth = l1/100.0f;
-            
+            colorDepth = l1/100.0f;   
             Debug.Log(CamX);
         }
+        colorDepth = Mathf.Clamp(1-colorDepth,0.1f,1.0f);
 
         float pos= Mathf.MoveTowards(transform.position.x,CamX,movingspeed*Time.deltaTime);
         transform.position = new Vector3(pos,0,-10);

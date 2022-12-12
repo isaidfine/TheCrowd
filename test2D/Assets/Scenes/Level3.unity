@@ -2789,7 +2789,7 @@ MonoBehaviour:
   empty: {fileID: 388111267}
   change: {fileID: 1360664944}
   endingMusic: {fileID: 1828803905}
-  startMusic: {fileID: 826381001}
+  step: {fileID: 627403372}
   obs: {fileID: 2052070351}
   Loader: {fileID: 0}
 --- !u!58 &2096040433388511921
