@@ -56,7 +56,7 @@ public class startenterl3 : MonoBehaviour
     }
     IEnumerator loadCredit()
     {
-        yield return new WaitForSeconds(12);
+        yield return new WaitForSeconds(22);
          LevelLoader.GetComponent<LevelLoader>().LoadNextLevel();
 
     }
