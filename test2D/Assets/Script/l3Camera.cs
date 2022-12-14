@@ -68,16 +68,30 @@ public class l3Camera : MonoBehaviour
 
         }
         else if (i>= pathPoints.Count-2 )
-        {
-
-            if (l1>100.0f)
+        {   
+            if (l1>130.0f)
+            {
+                CamX += 70.0f;
+                GetComponent<Camera>().orthographicSize= Mathf.MoveTowards(GetComponent<Camera>().orthographicSize,50f,5.0f*Time.deltaTime);
+            }
+            
+            else if (l1>100.0f)
             {
                 CamX += 70.0f;
                 startMusic.GetComponent<AudioSource>().Pause();
                 sphere.SetActive(false);
-                GetComponent<Camera>().orthographicSize= Mathf.MoveTowards(GetComponent<Camera>().orthographicSize,60f,2.0f*Time.deltaTime);
+            } 
+            
+            else if (l1>50f)
+            {
+                CamX += 70.0f;
+                GetComponent<Camera>().orthographicSize= Mathf.MoveTowards(GetComponent<Camera>().orthographicSize,60f,5.0f*Time.deltaTime);
 
             }
+
+
+           
+            
             colorDepth = l1/100.0f;   
             //Debug.Log(CamX);
         }

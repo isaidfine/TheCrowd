@@ -81,8 +81,7 @@ public class findPathL3 : MonoBehaviour {
         Sprite.SetActive(false);
         yield return new WaitForSeconds(10);
         endingMusic.SetActive(true);
-        yield return new WaitForSeconds(1);
-        GetComponent<startenter>().IsEnd = true;
+        GetComponent<startenterl3>().IsEnd = true;
 
 
     }
