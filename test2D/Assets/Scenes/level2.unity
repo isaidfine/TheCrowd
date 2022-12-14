@@ -3630,7 +3630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2911283286907066603, guid: 3b28db45a67f0f24e8f8334b850eb088, type: 3}
       propertyPath: m_Radius
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2911283286907066607, guid: 3b28db45a67f0f24e8f8334b850eb088, type: 3}
       propertyPath: redDot
