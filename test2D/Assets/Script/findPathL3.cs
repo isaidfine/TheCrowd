@@ -78,9 +78,9 @@ public class findPathL3 : MonoBehaviour {
     {
         
         obs.SetActive(false);
+        Sprite.SetActive(false);
         yield return new WaitForSeconds(10);
         endingMusic.SetActive(true);
-        Sprite.SetActive(false);
         yield return new WaitForSeconds(1);
         GetComponent<startenter>().IsEnd = true;
 

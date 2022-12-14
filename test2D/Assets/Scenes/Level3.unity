@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 327ff1812ac0af74d975a4bc65c3be66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dimensions_x: 30
+  dimensions_x: 23
   dimensions_y: 11
   dimensions_z: 0
   cellSize: 10
@@ -463,8 +463,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 327ff1812ac0af74d975a4bc65c3be66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dimensions_x: 18.6063
-  dimensions_y: 10.5324
+  dimensions_x: 23
+  dimensions_y: 11
   dimensions_z: 0
   cellSize: 10
   wrapEdges: 1
@@ -638,8 +638,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 327ff1812ac0af74d975a4bc65c3be66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dimensions_x: 18.6063
-  dimensions_y: 10.5324
+  dimensions_x: 23
+  dimensions_y: 11
   dimensions_z: 0
   cellSize: 10
   wrapEdges: 1
@@ -697,8 +697,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 327ff1812ac0af74d975a4bc65c3be66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dimensions_x: 18.6063
-  dimensions_y: 10.5324
+  dimensions_x: 23
+  dimensions_y: 11
   dimensions_z: 0
   cellSize: 10
   wrapEdges: 1
@@ -1079,8 +1079,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 327ff1812ac0af74d975a4bc65c3be66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dimensions_x: 18.6063
-  dimensions_y: 10.5324
+  dimensions_x: 23
+  dimensions_y: 11
   dimensions_z: 0
   cellSize: 10
   wrapEdges: 1
@@ -1644,8 +1644,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 327ff1812ac0af74d975a4bc65c3be66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dimensions_x: 18.6063
-  dimensions_y: 10.5324
+  dimensions_x: 23
+  dimensions_y: 11
   dimensions_z: 0
   cellSize: 10
   wrapEdges: 1
@@ -1745,7 +1745,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597304460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 700, y: -0.4, z: 0}
+  m_LocalPosition: {x: 750, y: -0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2035,8 +2035,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 327ff1812ac0af74d975a4bc65c3be66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dimensions_x: 18.6063
-  dimensions_y: 10.5324
+  dimensions_x: 23
+  dimensions_y: 11
   dimensions_z: 0
   cellSize: 10
   wrapEdges: 1
@@ -2109,7 +2109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 327ff1812ac0af74d975a4bc65c3be66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dimensions_x: 30
+  dimensions_x: 23
   dimensions_y: 11
   dimensions_z: 0
   cellSize: 10

@@ -3180,9 +3180,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1309839980, guid: 102534caef961fd429c3181932794443, type: 3}
-      propertyPath: m_Enabled
-      value: 1
+    - target: {fileID: 1309839982, guid: 102534caef961fd429c3181932794443, type: 3}
+      propertyPath: m_Radius
+      value: 2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1309839982, guid: 102534caef961fd429c3181932794443, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 2359666845788087888, guid: 102534caef961fd429c3181932794443, type: 3}
       propertyPath: m_RootOrder

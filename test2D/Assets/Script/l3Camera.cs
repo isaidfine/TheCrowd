@@ -79,7 +79,7 @@ public class l3Camera : MonoBehaviour
 
             }
             colorDepth = l1/100.0f;   
-            Debug.Log(CamX);
+            //Debug.Log(CamX);
         }
         colorDepth = Mathf.Clamp(1-colorDepth,0.1f,1.0f);
 
