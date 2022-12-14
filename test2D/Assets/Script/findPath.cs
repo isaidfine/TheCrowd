@@ -15,6 +15,8 @@ public class findPath : MonoBehaviour {
     public AudioSource CircleSFX;
     public GameObject eatingAudio;
 
+    public GameObject circleAll;
+
 
     private string LastName;
     private bool ChangePath = true;
@@ -58,8 +60,9 @@ public class findPath : MonoBehaviour {
             Debug.Log("finished!");
             GetComponent<MouseSteer>().enabled = false;
             //GetComponent<PullingPlayer>().enabled = false;
-            //GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
-            //GetComponent<SphereCollider>().enabled=false;
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f,0.0f);
+            circleAll.SetActive(false);
+           //GetComponent<SphereCollider2D>().enabled=false;
             //transform.GetChild(0).GetComponent<Animation>().enabled = true;
             GetComponent<startenter>().IsEnd = true;
 

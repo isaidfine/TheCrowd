@@ -1641,7 +1641,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 827739496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 99.6, y: -40.6, z: 0}
+  m_LocalPosition: {x: 95, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3785,6 +3785,14 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2911283286907066606, guid: 3b28db45a67f0f24e8f8334b850eb088, type: 3}
+      propertyPath: Xmax
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911283286907066606, guid: 3b28db45a67f0f24e8f8334b850eb088, type: 3}
+      propertyPath: Ymax
+      value: 55
+      objectReference: {fileID: 0}
     - target: {fileID: 2911283286907066607, guid: 3b28db45a67f0f24e8f8334b850eb088, type: 3}
       propertyPath: redDot
       value: 
@@ -3793,6 +3801,10 @@ PrefabInstance:
       propertyPath: CircleSFX
       value: 
       objectReference: {fileID: 8920020204034817872, guid: 2c7cbda31eeffb34283c00e67968061f, type: 3}
+    - target: {fileID: 2911283286907066607, guid: 3b28db45a67f0f24e8f8334b850eb088, type: 3}
+      propertyPath: circleAll
+      value: 
+      objectReference: {fileID: 206435456}
     - target: {fileID: 2911283286907066607, guid: 3b28db45a67f0f24e8f8334b850eb088, type: 3}
       propertyPath: redCircle
       value: 
@@ -3809,5 +3821,6 @@ PrefabInstance:
       propertyPath: reachDistance
       value: 7
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2911283286907066604, guid: 3b28db45a67f0f24e8f8334b850eb088, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3b28db45a67f0f24e8f8334b850eb088, type: 3}
