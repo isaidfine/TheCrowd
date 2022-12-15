@@ -64,7 +64,7 @@ public class l3Camera : MonoBehaviour
              pathPoints[i].GetComponent<SpriteRenderer>().enabled= false;
              i++;
             }
-            Debug.Log(i);
+            //Debug.Log(i);
 
         }
         else if (i>= pathPoints.Count-2 )
