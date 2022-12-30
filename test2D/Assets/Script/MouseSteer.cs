@@ -33,6 +33,7 @@ public class MouseSteer : MonoBehaviour
     {
         Cursor.visible = true;
         //Cursor.lockState = CursorLockMode.Confined;
+        velocity = new Vector2(0.0f,0.0f);
 
     }
 

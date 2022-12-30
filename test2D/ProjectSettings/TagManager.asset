@@ -4,11 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - range
   - Leader
   - follower
   - Obstacle
   - Sound
+  - EndingLine
   layers:
   - Default
   - TransparentFX

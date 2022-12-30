@@ -712,7 +712,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414231834}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b1a5365144f1b748bba626cbc76ecd3, type: 3}
   m_Name: 
@@ -725,7 +725,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414231834}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -2923,6 +2923,20 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1736237668}
   m_Enabled: 1
+--- !u!114 &1736237682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736237668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f58d8cf641f9aa49af606bd49567a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Xmax: 100
+  Ymax: 35
 --- !u!1 &1835839435
 GameObject:
   m_ObjectHideFlags: 0
@@ -3791,7 +3805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2911283286907066606, guid: 3b28db45a67f0f24e8f8334b850eb088, type: 3}
       propertyPath: Ymax
-      value: 55
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 2911283286907066607, guid: 3b28db45a67f0f24e8f8334b850eb088, type: 3}
       propertyPath: redDot
