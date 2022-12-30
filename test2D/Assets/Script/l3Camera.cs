@@ -32,7 +32,8 @@ public class l3Camera : MonoBehaviour
     private float length;
 
     // Start is called before the first frame update
-    void Start()
+
+    void OnDrawGizmos()
     {
         foreach(Transform pathPoint in theArray){
             if(pathPoint != this.transform){
@@ -40,6 +41,11 @@ public class l3Camera : MonoBehaviour
             }
         i=0;      
     }
+
+    }
+    void Start()
+    {
+        
     }
 
     // Update is called once per frame
