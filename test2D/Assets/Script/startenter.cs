@@ -22,7 +22,7 @@ public class startenter : MonoBehaviour
     {
         endingPoint= EndingPoint.transform.position;
         startPoint = StartPoint.transform.position;
-        IsEnter = true;
+        StartCoroutine(Start(6.0f));
         
     }
 
@@ -56,6 +56,13 @@ public class startenter : MonoBehaviour
 
         }
         
+    }
+
+    IEnumerator Start(float waitEnterTime)
+    {
+        yield return new WaitForSeconds(waitEnterTime);
+        IsEnter = true;
+
     }
 
 }

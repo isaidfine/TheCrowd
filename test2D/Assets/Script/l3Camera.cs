@@ -53,7 +53,7 @@ public class l3Camera : MonoBehaviour
     {
         playerPos = player.gameObject.transform.position;
         CamX= player.gameObject.transform.position.x>startFollowingX ? player. gameObject.transform.position.x:startFollowingX;
-         x1 = pathPoints[i].position;
+        x1 = pathPoints[i].position;
         x2 = pathPoints[i+1].position;
         l1=Vector3.Distance(playerPos, x1);
         l2=Vector3.Distance(playerPos, x2);

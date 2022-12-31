@@ -1818,13 +1818,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 908148429, guid: b3415563ecaa9cb489758f3bfffdb369, type: 3}
+      propertyPath: m_margin.x
+      value: -245.42047
+      objectReference: {fileID: 0}
+    - target: {fileID: 1797019224471458290, guid: b3415563ecaa9cb489758f3bfffdb369, type: 3}
+      propertyPath: transitionTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4847833655450630460, guid: b3415563ecaa9cb489758f3bfffdb369, type: 3}
       propertyPath: m_Name
       value: LevelLoader
-      objectReference: {fileID: 0}
-    - target: {fileID: 4847833655450630460, guid: b3415563ecaa9cb489758f3bfffdb369, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4847833655450630463, guid: b3415563ecaa9cb489758f3bfffdb369, type: 3}
       propertyPath: m_RootOrder
@@ -1868,10 +1872,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4847833655450630463, guid: b3415563ecaa9cb489758f3bfffdb369, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4847833655956015503, guid: b3415563ecaa9cb489758f3bfffdb369, type: 3}
-      propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2044,7 +2044,7 @@ MonoBehaviour:
   movingSpeed: 5
   LevelLoader: {fileID: 233699945}
   IsEnd: 0
-  IsEnter: 1
+  IsEnter: 0
 --- !u!114 &6570198727597776090
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1040,6 +1040,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 908148429, guid: b3415563ecaa9cb489758f3bfffdb369, type: 3}
+      propertyPath: m_text
+      value: Act II - Sun
+      objectReference: {fileID: 0}
+    - target: {fileID: 1797019224471458290, guid: b3415563ecaa9cb489758f3bfffdb369, type: 3}
+      propertyPath: transitionTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4847833655450630460, guid: b3415563ecaa9cb489758f3bfffdb369, type: 3}
       propertyPath: m_Name
       value: LevelLoader (1)
@@ -2924,7 +2932,7 @@ MonoBehaviour:
   movingSpeed: 5
   LevelLoader: {fileID: 504271881}
   IsEnd: 0
-  IsEnter: 1
+  IsEnter: 0
 --- !u!81 &1736237676
 AudioListener:
   m_ObjectHideFlags: 0
