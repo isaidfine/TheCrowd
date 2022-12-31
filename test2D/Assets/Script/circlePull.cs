@@ -23,10 +23,20 @@ public class circlePull : MonoBehaviour
     private bool IsTickingOut;
     private bool IsIn;
 
-    IEnumerator timer;
+   // IEnumerator timer;
     private float stayingTimer;
-    IEnumerator tick;
+    //IEnumerator tick;
     private float tickingTimer;
+
+    [Header("Cam Focusing")]
+    public  float CamSpeed;
+    public GameObject Cam;
+    private Vector3 OriPos;
+    private Ray CamRay;
+
+    private Vector3 TarPos;
+    private float FocusingScale;
+
 
 void OnDrawGizmos(){
         Gizmos.color = Color.white;
@@ -37,6 +47,9 @@ void OnDrawGizmos(){
     {
         //timer= Timer();
         //tick = TickingOut();
+        Cam = Camera.main.gameObject;
+        CamSpeed = 3.0f;
+        OriPos = Cam.transform.position;
         stayingTimer=0;
         tickingTimer=0;
         
@@ -44,14 +57,23 @@ void OnDrawGizmos(){
 
     void FixedUpdate()
     {
+        
         transform.position = new Vector3(transform.position.x, transform.position.y, 0.0f);
         dir =player.transform.position-this.gameObject.transform.position;
         IsEnter();
+
+        CamRay = Camera.main.ScreenPointToRay(player.transform.position);
+        TarPos = OriPos + player.transform.position;
+
+
         if(IsIn)
         {
+            
+
             stayingTimer += Time.deltaTime;
             if (stayingTimer<stayingTime)
             {
+                FocusingScale+= CamSpeed*Time.deltaTime;
                 speed= (radius- dir.magnitude)/dir.magnitude*pushing;
 
             }
@@ -59,12 +81,15 @@ void OnDrawGizmos(){
             {
                 speed = TickoutSpeed;
                 IsTickingOut = true;
+                FocusingScale =0.0f;
                 //tickingTimer=0;
             }
+            
         }
 
         else if(!IsIn)
         {
+            FocusingScale =0.0f;
             if (IsTickingOut)
             {
                 player.GetComponent<MouseSteer>().enabled=false;
@@ -83,6 +108,10 @@ void OnDrawGizmos(){
         }
         //speed =Mathf.Clamp(speed,0.0f,maxSpeed);       
         player.transform.position += speed*dir/dir.magnitude;
+        FocusCam(FocusingScale);
+        
+
+        
     }
         
     void IsEnter()
@@ -116,11 +145,29 @@ void OnDrawGizmos(){
             }
     }
 
-        void OpenOtherCircle()
+    void OpenOtherCircle()
     {
         for(int i = 0;i<otherCircle.Count;i++){
             otherCircle[i].gameObject.SetActive(true);
             }
     }
 
+    void FocusCam(float scale)
+    {
+        if (scale >0)
+        {
+            Cam.transform.position = Vector3.MoveTowards(Cam.transform.position,TarPos,CamSpeed*Time.deltaTime);
+            
+            Cam.GetComponent<Camera>().orthographicSize= 50.0f -scale;
+            Debug.Log(TarPos.x);
+        }
+
+        else if(scale ==0)
+        {
+            Cam.transform.position = Vector3.MoveTowards(Cam.transform.position,OriPos,CamSpeed*Time.deltaTime);
+            Cam.GetComponent<Camera>().orthographicSize= Mathf.MoveTowards(Cam.GetComponent<Camera>().orthographicSize,50.0f,CamSpeed*Time.deltaTime);
+        }
+
+        Cam.transform.position = new Vector3(Cam.transform.position.x,Cam.transform.position.y,OriPos.z);
+    }
 }
