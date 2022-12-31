@@ -4,6 +4,8 @@ using System.Collections;
 public class findPathL3 : MonoBehaviour {
 
     //public bool StartFollow = false;
+
+    public AnimationCurve curve;
     public path PathToFollow;
     public int CurrentWayPointID = 0;
     public Sprite redDot;
