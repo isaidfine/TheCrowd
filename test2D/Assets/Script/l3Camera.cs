@@ -12,6 +12,7 @@ public class l3Camera : MonoBehaviour
     public float movingspeed;
 
     [Header("Changing color")]
+    public GameObject Array;
     public List<Transform> pathPoints = new List<Transform>();
     Transform[] theArray;
     public GameObject Sprite;
@@ -35,17 +36,19 @@ public class l3Camera : MonoBehaviour
 
     void OnDrawGizmos()
     {
+        theArray = Array.GetComponentsInChildren<Transform>();
+        pathPoints.Clear();
         foreach(Transform pathPoint in theArray){
             if(pathPoint != this.transform){
                 pathPoints.Add(pathPoint);
-            }
-        i=0;      
-    }
+            }      
+        }   
 
     }
     void Start()
     {
         
+            i=1;        
     }
 
     // Update is called once per frame
@@ -73,7 +76,7 @@ public class l3Camera : MonoBehaviour
             //Debug.Log(i);
 
         }
-        else if (i>= pathPoints.Count-2 )
+        else if (i>= pathPoints.Count-1 )
         {   
             if (l1>130.0f)
             {
